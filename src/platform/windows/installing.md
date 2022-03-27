@@ -7,7 +7,7 @@
 최신 Anki 버전은 윈도우 7, 8, 10 or 11 64비트 버전을 요구합니다.
 
 마지막으로 32비트를 지원하는 버전은 Anki 2.1.35-alternate 입니다.
-만약 오래된 컴퓨터를 사용하는 경우, [릴리즈 페이지](https://github.com/ankitects/anki/releases) 에서 이전 버전을 확인하실 수 있습니다. 
+만약 오래된 컴퓨터를 사용하는 경우, [릴리즈 페이지](https://github.com/ankitects/anki/releases) 에서 이전 버전을 확인하실 수 있습니다.
 
 ## 설치
 
@@ -16,31 +16,23 @@ Anki를 설치하려면:
 1. <https://apps.ankiweb.net> 에서 Anki 다운로드.
 2. 바탕화면 또는 다운로드 폴더에 installer를 설치.
 3. 더블클릭하여 installer를 설치합니다. 만약 오류 메시지가 뜬다면, 왼쪽의 링크를 참고하세요.
-5.  Anki가 설치되면, 바탕화면의 Anki 를 더블클릭하여 실행할 수 있습니다.
+4. Anki가 설치되면, 바탕화면의 Anki 를 더블클릭하여 실행할 수 있습니다.
 
 ## 업그레이드
 
-If upgrading from Anki 2.1.6+, there is no need to uninstall the previous
-version first. All you need to do is close Anki if it is open, and then follow
-the installation steps above. Your cards will be preserved when you upgrade.
+Anki 2.1.6 이상 버전에서 업그레이드하는 경우 이전 버전을 제거할 필요가 없습니다.
+Anki가 열려 있는 경우 Anki를 닫고 위의 설치 단계를 따르기만 하면 됩니다. 카드는 업그레이드 시 유지됩니다.
 
-If upgrading from an Anki version before 2.1.6, or switching from the standard
-to the alternate version or vice versa, we recommend uninstalling the old
-version first, which will remove Anki's program data, but not delete your card
-data.
+2.1.6 이전 Anki 버전에서 업그레이드하거나 표준 버전에서 대체 버전으로 전환하거나 그 반대로 전환한 경우 먼저 이전 버전을 제거할 것을 권장합니다. 그러면 Anki의 프로그램 데이터가 삭제되지만 카드 데이터는 삭제되지 않습니다.
 
-If you wish to downgrade to a previous version, please make sure you
-[downgrade first](http://changes.ankiweb.net).
+이전 버전으로 다운그레이드하려면 다음 사항을 확인하십시오.
+[다운그레이드](http://changes.ankiweb.net).
 
 ## 에드온 호환성
 
-Some add-ons have not been updated to support the latest Anki release yet. If an
-add-on you depend on has not been ported to the latest release yet, you may have
-more luck with 2.1.44 from the [releases
-page](https://github.com/ankitects/anki/releases).
+일부 애드온은 최신 Anki 릴리스를 지원하도록 아직 업데이트되지 않았습니다.
+사용하고 있는 애드온이 아직 최신 릴리스로 이식되지 않은 경우 [릴리즈 페이지](http://https://github.com/ankitects/anki/releases))에서 2.1.44를 이용할 수 있습니다.
 
-## Problems
+## 문제
 
-If you encounter any issues when installing or starting Anki, please see the
-following links on the left.
-
+Anki 설치 또는 시작 시 문제가 발생할 경우 왼쪽에 있는 링크를 참조하십시오.

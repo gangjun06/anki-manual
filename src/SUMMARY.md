@@ -2,7 +2,7 @@
 
 [소개](intro.md)
 
-- [배경](background.md)
+- [배경지식](background.md)
 - [플렛폼 노트](platform/intro.md)
   - [Windows](platform/windows/installing.md)
     - [설치 & 업그레이트](platform/windows/installing.md)

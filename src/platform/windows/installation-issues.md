@@ -1,22 +1,17 @@
-# Windows installation issues
+# 윈도우 설치 문제
 
-Some error messages you may encounter when installing Anki:
+Anki 설치 시 발생할 수 있는 오류 메시지:
 
 <!-- toc -->
 
-Please also see [startup issues](./startup-issues.md).
+먼저 [셋업 문제](./startup-issues.md) 글을 봐 주세요.
 
-## "Error opening file for writing"
+## "쓰기 위해 파일을 여는 중 오류 발생"
 
-If closing Anki and your browser does not help, please try restarting your
-computer, then running the installer again.
+Anki와 탐색기를 닫고도 해결되지 않으면 컴퓨터를 다시 시작한 후 설치 프로그램을 다시 실행하십시오.
 
-## "Windows protected your PC"
+## "Windows에 의해 PC가 보호됨"
 
-When a new Anki version is released, Windows may display a scary-looking message
-until it has seen enough people using the new version. To be able to proceed
-with app installation, please use [Run
-anyway](https://www.tekrevue.com/tip/windows-protected-your-pc-disable-smartscreen/).
+새로운 Anki 버전이 출시되면 Windows는 새로운 버전을 사용하는 사용자를 충분히 생길 때까지 무시무시한 메시지를 표시할 수 있습니다. 앱 설치를 계속하려면 [Run anyways](https://www.tekrevue.com/tip/windows-protected-your-pc-disable-smartscreen/)을 사용하십시오.
 
-Antivirus programs may sometimes also report a [false
-positive](https://faqs.ankiweb.net/my-antivirus-program-says-anki-is-infected.html).
+백신 프로그램에서 때떄로 [잘못된 판정](https://faqs.ankiweb.net/my-antivirus-program-says-anki-is-infected.html)을 할 수 있습니다.

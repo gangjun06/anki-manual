@@ -1,49 +1,42 @@
-# Windows display issues
+# 윈도우 디스플레이 문제
 
 <!-- toc -->
 
-On Windows, there are three ways of content being displayed on screen. The
-default is _software_, which is slower, but the most compatible. There are two
-other options that are faster: _OpenGL_ and _ANGLE_. They are faster, but they
-may not work, or may cause display issues such as missing menubars, blank
-windows, and so on. Which one works best will depend on your computer.
+Windows 에서는, 컨텐츠가 화면에 표시되는 3개의 방법이 있습니다.
+기본값은 *software*로 속도는 느리지만 호환성이 가장 높습니다.
+더 빠른 옵션은 'OpenGL'과 'ANGLE' 두 가지가 있습니다.
+대신 고속이지만 동작하지 않거나, 메뉴바가 없거나, 창이 공백인 등의 디스플레이 문제가 발생할 수 있습니다.
+어떤 것이 가장 잘 작동하는지는 컴퓨터에 따라 달라집니다.
 
-If and how you can change this display method depends on which Anki version you
-are using, more precisely on the version of the used Qt toolkit.
+이 표시 방식을 변경할 수 있는 경우 및 방법은 사용하는 Anki 버전에 따라 달라집니다. (정확히는 사용하는Qt 툴킷의 버전에 따라 달라집니다)
 
 ## Qt5
 
-This toolkit is used by all Anki versions prior to 2.1.50.
-Here, the display driver can be adjusted via the Tools>Preferences menu. Make sure
-you restart Anki after adjusting it.
+이 툴킷은 2.1.50 이전 버전의 Anki에서 사용됩니다. 여기서는 툴 -> 설정 메뉴에서 디스플레이 드라이버를 설정할 수 있습니다.
+디스플레이 드라이버를 변경한 후에는 Anki를 다시 시작해야 합니다.
 
-If you’re unable to get to Anki’s preferences screen, and restarting Anki a few
-times does not help, you may need to manually adjust the graphics driver. You
-can do this by starting cmd.exe and typing the following:
+Anki 설정 화면으로 들어갈 수 없구나 다시 시작해도 해결되지 않는 경우
+cmd.exe를 시작하고 다음을 입력하여 드라이버를 변경할 수 있습니다:
 
 ```bat
 echo auto > %APPDATA%\Anki2\gldriver
 ```
 
-The default is `software`; the other two drivers you can try are `angle` and `auto`.
+기본값은 `소프트웨어` 이며, `angle`과 `auto`를 사용할 수 있습니다.
 
 ## Qt6
 
-Anki 2.1.50+ is available with the more recent Qt6 toolkit. Here, the display
-driver cannot be easily changed, and `angle` is not supported anymore at all.
-However, it is still possible to use `software` by running Anki from
-cmd.exe after executing the following line:
+Anki 2.1.50+는 최신 Qt6 툴킷에서 사용할 수 있습니다.
+이 버전에서는 디스플레이 드라이버를 쉽게 변경할 수 없고 `angel`드라이버도 지원되지 않습니다.
+단, 다음 명령어를 실행한 후 cmd.exe에서 Anki를 실행하여 `소프트웨어`드라이버를 사용할 수 있습니다.
 
 ```bat
 set QT_OPENGL=software
 ```
 
-If you want to make this setting permanent, you will have to add this line to the
-top of the file anki-console.bat, and run it instead of anki.exe.
+이 설정을 영속적으로 사용하려면 이 명령어를 anki-console.bat 파일 상단에 추가하여 anki.exe 대신 실행해야 합니다.
 
-## Full screen
+## 전체화면
 
-Anki 2.1.50+ comes with a full screen mode, but due to various issues, it had to
-be disabled while `OpenGL` is used. Turning on software rendering as described
-above will allow the full screen option to be used, though please bear in mind
-that rendering performance may suffer.
+Anki 2.1.50+는 전체화면 모드가 기본 제공되지만 여러 가지 문제로 OpenGL을 사용하는 동안은 전체화면을 사용할 수 없습니다.
+위와 같이 `software` 렌더링을 켜면 전체 화면 옵션을 사용할 수 있으나 렌더링 성능이 저하될 수 있습니다.

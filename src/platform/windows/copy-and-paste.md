@@ -1,6 +1,3 @@
-# Copy and paste issues
+# 복사 붙여넣기 문제
 
-If you are experiencing problems with copying and pasting, please check if you
-are running other programs on your computer that monitor the clipboard, such as
-dictionary programs, clipboard managers or clipping tools. The toolkit Anki uses
-can have trouble when such programs are running.
+복사 및 붙여넣기에 문제가 있는 경우 사전 프로그램, 클립보드 관리자 또는 클리핑 도구와 같은 클립보드를 모니터하는 다른 프로그램을 컴퓨터에서 실행하고 있는지 확인하십시오. Anki가 사용하는 툴킷은 이러한 프로그램을 실행할 때 문제가 발생할 수 있습니다.

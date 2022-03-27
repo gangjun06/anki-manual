@@ -1,31 +1,31 @@
-# Windows permission problems
+# 윈도우 권한 문제
 
-**Permission Problems**
+**권한 문제**
 
-If you receive "access denied" messages, some of Anki's files may be set to read only mode, meaning Anki is not able to write to them.
+"접근 거부" 메시지가 표시되면 Anki의 파일 중 일부가 읽기 전용 모드로 설정될 수 있습니다. 즉, Anki는 파일에 쓸 수 없습니다.
 
-To fix the problem, you can do the following:
+이 문제를 해결하려면 다음 작업을 수행합니다.:
 
-- in the search area of the start bar, type cmd.exe and hit enter
-- in the window that opens, type the following and hit enter to see your username:
+- `윈도우키+R`로 시작 메뉴를 연 후 `cmd`를 입력하고 Enter 키를 누릅니다.
+- cmd창에서 다음을 입력하고 Enter 키를 눌러 사용자 이름을 확인합니다.
 
 whoami
 
-- type the following, hitting enter after each line, and replacing ____ (and keeping the :F part) with your username from the previous command
+- 아래의 커맨드를 각각 cmd에 붙여놓은 후 Enter을 누릅니다. 단 두번째 명령의 \_\_\_\_는 위에서 얻는 사용자 이름으로 대체합니다. (:F는 지우시 마시오)
 
 cd %APPDATA%
 
-icacls Anki2 /grant ____:F /t
+icacls Anki2 /grant \_\_\_\_:F /t
 
-That command should fix the permissions on Anki's data folder, and you should now be able to start the program.
+이 명령어를 실행하면 Anki의 데이터 폴더에 대한 권한이 수정되어 프로그램을 시작할 수 있습니다.
 
-**Antivirus/Firewall/Anti-Malware**
+**백신/방화벽**
 
-Some users have experienced "permission denied" or "readonly" errors that were caused by security software installed on their machine. You may need to add an exception for Anki, or try temporarily disabling the software to rule it out as the cause. Some users have reported that simply turning off their software did not fix the problem, and they either had to add an exception for Anki or uninstall the software.
+컴퓨터에 설치된 보안 소프트웨어로 인해 "권한 거부" 또는 "읽기 전용" 오류가 발생한 사용자도 있습니다. Anki에 대한 예외를 추가하거나 소프트웨어를 일시적으로 비활성화하여 원인이 되지 않도록 해야 할 수 있습니다. 일부 사용자는 소프트웨어를 꺼도 문제가 해결되지 않으며 Anki에 대한 예외를 추가하거나 소프트웨어를 제거해야 한다고 보고했습니다.
 
-**Debugging Permission Problems**
+**권한 문제 디버깅**
 
-If problems persist after you've ruled out Antivirus and related programs, have performed the steps above to fix permissions, and don't use OneDrive, please run the following commands in cmd.exe, pressing enter after each one.
+백신 및 관련 프로그램을 비활성화 하고 위의 절차를 통하여 권한을 수정한 후 OneDrive를 사용하지 않은 후에도 문제가 해결되지 않으면 cmd.exe에서 다음 명령을 실행하여 각 명령어 뒤에 Enter 키를 누르십시오.
 
 whoami
 
@@ -33,4 +33,4 @@ cd %APPDATA%
 
 icacls Anki2 /t
 
-Then please copy & paste or screenshot what you see, and post it to us in a support ticket.
+그러면 보이는 것을 복사하여 붙여넣기 또는 스크린샷을 찍어 지원 티켓에 업로드하여 주십시오.
