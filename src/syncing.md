@@ -1,118 +1,70 @@
-# Syncing with AnkiWeb
+# AnkiWeb 연동
 
 <!-- toc -->
 
-AnkiWeb is a service that allows you to keep your collection
-synchronized across multiple devices, and to study online. Please sign
-up for a [free account](https://ankiweb.net/) before following the steps
-below.
+`AnkiWeb`은 콜렉션을 기기간 동기화해주고 온라인에서 학습할 수 있게 해주는
+서비스 입니다. 아래의 단계를 따라하기전, [무료 회원가입](https://ankiweb.net/) 을 하여 주세요.
 
-## Intro Videos
+## 소개 영상
+빠르게 동기화에 알고싶다면,  [동기화 소개 영상](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on). 을 확인하세요.
 
-For a quick introduction to syncing, please check out the
-[syncing intro videos](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on).
+## 셋업
 
-## Setup
+장치간 동기화를 시작할려면 메인화면 오른쪽 상단의 동기화 버튼(단축키 `Y`)을 눌러주세요.
+등록 과정에서 작성한 AnkiWeb 아이디와 비밀번호를 입력하는 창이 나타납니다.
 
-To start syncing your collection across devices, click the sync button
-(the top right one on the main screen), or press 'y' on your keyboard.
-You’ll be prompted for your AnkiWeb ID and password, which you created
-in the signup process.
+컬렉션을 처음 동기화하면 Anki에서 업로드 또는 다운로드 여부를 묻습니다.
+컴퓨터에 카드가 있고 AnkiWeb 계정이 비어 있는 경우 "업로드"를 선택하여
+데이터를 AnkiWeb으로 보냅니다. 다른 장치에서 AnkiWeb에 카드가 있고 컴퓨터에
+카드가 없는 경우 "다운로드"를 선택하여 빈 로컬 컬렉션을 AnkiWeb에 있는 카드로 대체합니다.
+양쪽 디바이스에 다른 카드가 있는 경우 데이터 손실을 방지하기 위해 [추가 작업이 필요합니다](#병합-충돌)
 
-When you synchronize your collection for the first time, Anki will ask
-you if you want to upload or download. If you have cards on your
-computer and your AnkiWeb account is empty, choose "upload" to send your
-data to AnkiWeb. If you have cards on AnkiWeb from another device, and
-no cards on your computer, choose "download" to replace the empty local
-collection with the cards that are on AnkiWeb. If you have different
-cards on both devices, [more work is required](#merging-conflicts) to
-avoid losing data.
+초기 단방향 동기화가 완료되면 Anki는 몇 가지 예외를 제외하고 여러 기기에서의 변경 사항을
+자동으로 병합할 수 있습니다.
 
-Once the initial one way sync is completed, Anki will be able to merge
-changes from multiple locations with a few exceptions.
+1대의 기기으로 Anki를 사용하고 있는 여러명의 유저가 각각 유저의 프로필을 만들어 사용하는 경우, 각 유저는 동기화하는 독자적인 AnkiWeb 계정을 작성할 필요가 있습니다. 하나의 AnkiWeb 계정으로 여러 프로필을 동기화하려고 하면 데이터가 손실됩니다.
 
-If you have multiple people using Anki on one machine and have created a
-profile for each user, each user will need to create their own AnkiWeb
-account to sync with. If you attempt to synchronize multiple profiles
-with a single AnkiWeb account, you will lose data.
+## 자동 동기화
 
-## Automatic Syncing
+동기화가 활성화되면 컬렉션이 닫히거나 열릴 때마다 Anki가 자동으로 동기화됩니다. 수동으로 동기화하려면 Anki 환경설정에서 자동 동기화를 사용 불가능으로 설정할 수 있습니다.
 
-Once syncing is enabled, Anki will automatically sync each time your
-collection is closed or opened. If you would prefer to synchronize
-manually, you can disable automatic syncing in Anki’s preferences.
+## 버튼 색
 
-## Button Color
+일반 동기화가 필요한 경우 동기화 버튼이 파란색으로, 전체 동기화가 필요한 경우 빨간색으로 변경됩니다.
 
-The sync button will change to blue when a normal sync is required,
-and red when a full sync is required.
+## 미디어
 
-## Media
+관련 영상: <https://www.youtube.com/watch?v=phP9GGG-PxY>
 
-Related video: <https://www.youtube.com/watch?v=phP9GGG-PxY>
+Anki는 노트에 사용되는 소리와 이미지를 동기화합니다. 미디어 폴더에 미디어가 추가 또는 제거되었을 때는 알 수 있지만 기존 파일을 추가 또는 제거하지 않고 편집했는지 여부는 알 수 없습니다. 편집 내용을 확인하려면 파일 추가 또는 삭제도 필요합니다.
 
-Anki will synchronize any sounds and images used by your notes. It will
-notice when media has been added or removed from your media folder, but
-will not notice if you have edited some existing files without adding or
-removing any. To get your edits noticed, you need to add or remove a
-file as well.
+USB 플래시 드라이브에서 Anki를 실행하는 경우 NTFS 파일 시스템을 사용해야 합니다. Anki는 FAT32 파일 시스템에서 미디어 변경을 감지하지 못할 수 있습니다.
 
-If you’re running Anki off a USB flash drive, you should use an NTFS
-file system, as Anki may not be able to detect media changes on a FAT32
-filesystem.
+## 충돌
 
-## Conflicts
+관련 영상: <https://www.youtube.com/watch?v=UEAcpfMQnjo>
 
-Related video: <https://www.youtube.com/watch?v=UEAcpfMQnjo>
+통상적인 상황에서는 학습과 노트 편집을 병합할 수 있으므로 동기화하기 전에  2개의 다른 기기에서
+학습 또는 편집하면 Anki가 두 위치 모두에서 변경 내용을 보존합니다. 같은 카드를 2개의 다른 기기에서
+학습했을 경우, 양쪽의 학습가 리비전 이력에 표시되며, 카드는 최근 대답한 상태로 유지됩니다.
 
-Under normal circumstances, reviews and note edits can be merged, so if
-you review or edit on two different devices before syncing, Anki will
-preserve your changes from both locations. If the same card has been
-reviewed in two different locations, both reviews will be marked in the
-revision history, and the card will be kept in the state it was when it
-was most recently answered.
+Anki가 병합할 수 없는 몇 가지 상황이 있습니다. 이는 주로 메모 형식과 관련이 있습니다. 새 필드 추가 또는 카드 템플릿 제거 등이 있습니다. 병합할 수 없는 작업을 수행하면 Anki가 경고를 표시하고 작업을 중단할 수 있는 옵션을 제공합니다. 계속하도록 선택할 경우 컬렉션을 다음에 동기화할 때 단방향 동기화가 강제됩니다.
 
-There are certain changes that Anki is unable to merge. These mainly
-relate to the format of notes: things like adding a new field, or
-removing a card template. When you perform an operation that can’t be
-merged, Anki will warn you, and give you the option of aborting the
-operation. If you choose to continue, you’ll be asked to choose whether
-to keep the local copy or the copy on AnkiWeb when your collection is
-next synchronized.
+또는 동기화 중에 특정 문제가 감지되면 단방향 동기화로 강제됩니다. 동기화 문제가 계속 발생할 경우 지원 사이트에 게시해 주십시오.
 
-If certain problems are detected while syncing, it will also force a one
-way sync. If you find this consistently happens, please post on our
-support site.
+단방향 동기화가 필요한 경우 동기화 할 시 컬렉션을 AnkiWeb에서 다운받을지 AnkiWeb에 업로드할지를 선택해야 합니다. 양쪽에서 변경이 이루어진 경우 한쪽 기기의 변경만 보존할 수 있습니다.
 
-When a one way sync is required, you need to choose whether you wish to
-keep the collection on your local device, or the collection on AnkiWeb.
-If changes have been made on both ends, only changes on one end can be
-preserved.
+`업로드`를 선택하면 로컬 디바이스의 콘텐츠가 AnkiWeb으로 전송됩니다. 그런 다음 다른 기기에서 동기화할 때에는 `다운로드`를 선택하여 해당 컨텐츠의 복사본을 가져오도록 해야 합니다.
 
-If you choose Upload, the content on your local device will be sent to
-AnkiWeb. You then need to sync your other devices, and choose "Download"
-to have them grab a copy of that content.
+`다운로드`를 선택하면 로컬 변경이 AnkiWeb에 있는 데이터로 대체됩니다.
 
-If you choose Download, it will replace any local changes you’ve made
-with the data that is on AnkiWeb.
+모든 기기가 동기화되면 이후 동기화는 서로다른 기기의 변경을 자동으로 병합하는 일반 동작으로 돌아갑니다.
 
-Once all devices are in sync, future syncs will return to the normal
-behaviour of merging changes from both ends.
+전체 업로드 또는 다운로드를 강제하는 경우 (예를 들어 실수로 한쪽 뭉치를 삭제하여 삭제를 동기화하는 것이 아니라 뭉치를 복원하는 경우), `툴` -&gt; `설정`-&gt; `네트워크` -&gt; `다음 동기화 때, 한 방향으로 변경 사항 적용하기` 체크박스를 켜고 정상적으로 동기화할 수 있습니다. (사용할 쪽을 선택할 수 있습니다.)
 
-If you wish to force a full upload or download (for example, because you
-accidentally deleted a deck on one side and want to restore the deck
-rather than having its deletion synchronized), you can check the "On
-next sync, force changes in one direction" box in
-Tools&gt;Preferences&gt;Network, then sync as usual. (You’ll be given
-the option to choose which side you want to use.)
+단방향 동기화를 강제하면 카드 동기화에만 영향을 줍니다. 미디어는 정상적으로 동기화됩니다. AnkiWeb에서 삭제할 파일이 있는 경우 먼저 클라이언트가 완전히 동기화되어 있는지 확인하십시오. 동기화가 최신 상태가 되면 (미디어 확인 기능을 통해) 삭제한 파일은 다음 동기화 시 AnkiWeb에서 제거됩니다.
 
-Forcing a one way sync only affects card syncing - media is synced as
-normal. If you have files that you want to remove from AnkiWeb, please
-ensure your client is fully in sync first. After syncing is up to date,
-any files you remove (eg via the Check Media function) will be removed
-from AnkiWeb on the following sync.
-
-## Merging Conflicts
+## 병합 충돌
 
 Because the [first sync](#setup) can only sync changes in one
 direction, if you have added different content to different devices or
@@ -149,55 +101,36 @@ You can now use File&gt;Import to import the .apkg files you exported
 earlier, which will merge the exported content with the existing
 content, so everything will be in one place.
 
-## Firewalls
+## 방화벽
 
-Anki needs to be able to make outbound HTTPS connections to sync. It must be
-able to connect to ankiweb.net, sync.ankiweb.net, sync2.ankiweb.net, and so on.
-These domains may change over time, and the IP addresses they point to may also
-change, so we recommend you allow wildcard access to \*.ankiweb.net to reduce
-the chance of the firewall rules needing to be updated in the future.
+Anki는 동기화할 떄에는 HTTPS 전송이 가능해야 하고 `ankiweb.net, ankiweb.net, sync2.ankiweb.net`에 접속하여 동기화할 수 있어야 합니다.
+이러한 도메인은 시간이 지남에 따라 변경될 수 있으며 이들이 가리키는 IP 주소도 변경될 수 있습니다. 
+따라서 향후 방화벽규칙을 갱신해야 할 가능성을 줄이기 위해 `*.ankiweb.net` 에 와일드카드접근을 허용하는 것을 권장합니다.
 
-If you have a firewall on your machine, you should add an exception for
-Anki. If you are on a work or school network, please contact your
-network administrator for assistance - it is not something we can help
-you with.
+컴퓨터에 방화벽이 있는 경우 Anki에 대한 예외를 추가해야 합니다. 직장 또는 학교 네트워크에 접속하고 있는 경우는, 네트워크 관리자에게 문의해 주세요.
 
-## Proxies
+## 프록시
 
-If you need a proxy to access the internet, Anki should automatically
-pick up your system proxy settings if you’re on Windows or macOS, and
-will honour the HTTP_PROXY environment variable if you’re on another
-platform.
+인터넷에 접속하기 위해 프록시가 필요한 경우 Windows 또는 MacOS에 있는 경우 Anki는 자동으로 시스템 프록시 설정을 선택하고 다른 플랫폼에 있는 경우 `HTTP_PROXY` 환경변수를 적용합니다.
 
-Anki will only be able to pick up your system settings if a proxy is
-manually configured, and does not require a password. If your system
-uses automatic proxy setup, or uses a proxy that requires a username and
-password, you will need to manually tell Anki the proxy configuration.
+Anki는 프록시가 수동으로 구성되고 암호가 필요하지 않은 경우에만 시스템 설정을 선택할 수 있습니다. 시스템에서 자동 프록시 설정을 사용하는 경우 또는 사용자 이름과 비밀번호가 필요한 프록시를 사용하는 경우 프록시 설정을 Anki에게 수동으로 알려야 합니다.
 
-To tell Anki your proxy settings, define a HTTPS_PROXY environmental
-variable that points to the proxy server. It will look like:
+Anki에게 프록시 설정을 알리려면 프록시 서버를 가리키는 `HTTPS_PROXY` 환경변수를 정의합니다.
+다음과 같이 표시됩니다:
 
     http://user:pass@proxy.company.com:8080
 
-If your username or password contains an @ (eg `user@workdomain.com`),
-you need to change it to %40, like so:
+사용자 이름 또는 비밀번호에 특수문자 `@`(예를 들어 `user@workdomain.com`)가 포함되어 있는 경우
+다음과 같이 `@`를 `%40`으로 변경해야 합니다.
 
     http://user%40workdomain.com:pass@proxy.company.com:8080
 
-Anki 2.0 expects to find HTTP_PROXY instead of HTTPS_PROXY.
+Anki 2.0에서는 `HTTPS_PROXY`가 아닌 `HTTP_PROXY`가 검색됩니다.
 
-To set environmental variables on Windows, please see
-<https://www.google.com/search?q=windows+set+environmental+variable>
+Windows에서 환경 변수를 설정하려면 [구글검색](https://www.google.com/search?q=윈도우%20환경변수%20설정) 을 참고하세요.
 
-If you’re on a Mac, please see
-<http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x>
+Mac에서 환경변수를 설정하려면 [이 링크](<http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x) 를 참고하세요.
 
-Heavily locked down networks that intercept secure connections and
-present their own certificate instead may cause Anki to throw up SSL
-errors. In such environments, you may be able to work around the errors
-with <https://ankiweb.net/shared/info/878367706>
+보안 접속을 가로채거나 자체 인증서를 사용하여 네트워크가 잠기면, Anki가 SSL 에러를 발생시킬 가능성이 있습니다. 이러한 환경에서는 [에드온](https://ankiweb.net/shared/info/878367706)을 사용하여 오류를 회피할 수 있습니다.
 
-An alternative solution is to install a local proxy server, and point
-that proxy server at your normal proxy server. You can then tell Anki to
-use the local proxy, which will redirect requests to the proxy you
-normally use.
+대체 해결법은 로컬 프록시 서버를 설치하고 해당 프록시 서버를 일반 프록시 서버로 지정하는 것입니다. 그런 다음 Anki에게 로컬 프록시를 사용하도록 지시할 수 있습니다. 그러면 요청이 일반적으로 사용하는 프록시로 리디렉션됩니다.

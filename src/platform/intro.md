@@ -1,4 +1,3 @@
-# Platform Notes
+# 플렛폼 노트
 
-The way Anki is installed, and the possible problems you may encounter, depend
-on the type of computer you are using.
+Anki 설치 방법 및 발생할 수 있는 문제는 사용 중인 컴퓨터의 운영체제에 따라 다릅니다.

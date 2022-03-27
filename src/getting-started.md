@@ -1,153 +1,126 @@
-# Getting Started
+# 시작하기
 
 <!-- toc -->
 
-## Installing & Upgrading
+## 설치 및 업그레이드
 
-Please see the instructions for your computer:
+본인의 OS에 맞는 문서를 참고하여 주세요:
 
 - [Windows](./platform/windows/installing.md)
 - [Mac](./platform/mac/installing.md)
 - [Linux](./platform/linux/installing.md)
 
-## Videos
+## 영상
 
-For a quick way to dive into Anki, please have a look at these intro
-videos. Some were made with a previous Anki version, but the concepts
-are the same.
+Anki에 대하여 빠른 설명을 보고 싶으시면, 아래의 영상들을 참고하여 주세요.
+몇몇 영상은 이전 버전의 Anki를 기준으로 제작되었지만, 개념은 같습니다.
 
-- [Shared Decks and Review
-  Basics](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on)
+- [공유뭉치 및 기본기능](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on)
 
-- [Syncing](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)
+- [동기화](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)
 
-- [Switching Card
-  Order](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
+- [카드 순서 바꾸기](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
 
-- [Styling Cards](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
+- [카드 꾸미기](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
 
-- [Typing in the
-  Answer](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
+- [카드 답 타이핑](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
 
-If YouTube is unavailable in your country, you can [download the
-videos](https://apps.ankiweb.net/downloads/archive/screencasts/2.0/)
-instead.
+만약 현재 국가에서 유튜브를 사용할 수 없으면, [영상 다운로드](https://apps.ankiweb.net/downloads/archive/screencasts/2.0/)
+를 대신 이용할 수 있습니다.
 
-## Key Concepts
+## 주요 개념
 
-### Cards
+### 카드
 
-A question and answer pair is called a 'card'. This is based on a paper
-flashcard with a question on one side and the answer on the back. In
-Anki a card doesn’t actually look like a physical card, and when you
-show the answer the question remains visible by default. For example, if
-you’re studying basic chemistry, you might see a question like:
+질문과 답의 쌍을 `카드` 라고 부릅니다. 이것은, 한쪽에는 질문이, 뒷면에는 답이 있는
+종이 플래시 카드에 근거하고 있습니다. Anki에서 카드는 실제 카드처럼 보이지 않습니다.
+기본적으로 질문을 표시한 상태로 답을 같이 보여줍니다. 예를 들어,
+기초 화학을 공부하고 있을 때 이런 질문을 볼 수 있을 겁니다.
 
-    Q: Chemical symbol for oxygen?
+    Q: 산소의 원소 기호는?
 
-After thinking about it, and deciding the answer is O, you click the
-show answer button, and Anki shows you:
+생각해 보고 답을 `O`로 정한 후 `답 보기` 버튼을 누르면,
+Anki는 다음과 같이 표시해줄 것입니다:
 
-    Q: Chemical symbol for oxygen?
+    Q: 산소의 원소 기호는?
     A: O
 
-After confirming that you are correct, you can tell Anki how well you
-remembered, and Anki will choose a next time to show you again.
+그것이 옳다는 것을 확인한 후 Anki에게 얼마나 잘 기억하고 있는지 말하면,
+Anki는 다음에 보여줄 시간을 선택할 것입니다.
 
-### Decks
+### 뭉치(Decks)
 
-A 'deck' is a group of cards. You can place cards in different decks to
-study parts of your card collection instead of studying everything at
-once. Each deck can have different settings, such as how many new cards
-to show each day, or how long to wait until cards are shown again.
+`뭉치` 는 카드의 그룹입니다.  카드를 다른 뭉치에 배치하여, 모든 카드를 공부하는 대신
+카드 뭉치의 일부를 학습합니다. 각각의 뭉치는 새로 학습할 카드수, 얼마나 후에 카드를
+다시 학습할 것인지 등을 설정할 수 있습니다.
 
-Decks can contain other decks, which allows you to organize decks into a
-tree. Anki uses “::” to show different levels. A deck called
-“Chinese::Hanzi” refers to a “Hanzi” deck, which is part of a “Chinese”
-deck. If you select “Hanzi” then only the Hanzi cards will be shown; if
-you select “Chinese” then all Chinese cards, including Hanzi cards, will
-be shown.
+뭉치는 다른 뭉치를 포함할 수 있으며, Anki는 `::`을 통하여 뭉치안의 뭉치를 구별합니다. 
+예시로, `영어::일상영단어`라는 뭉치는 `영어`뭉치안에 포함된 `일상영단어`뭉치를 뜻합니다.
+`영어::일상영단어`를 선택하면 일상영단어에 포함된 단어만 학습할 수 있고,
+`영어`를 선택하면 영어뭉치내의 모든 단어(일상영단어를 포함하는) 단어를 학습할 수 있습니다.
 
-To place decks into a tree, you can either name them with “::” between
-each level, or drag and drop them from the deck list. Decks that have
-been nested under another deck (that is, that have at least one “::” in
-their names) are often called 'subdecks', and top-level decks are
-sometimes called 'superdecks' or 'parent decks'.
+위와같이 뭉치를 사용하고 싶으면, 뭉치의 이름을 `::`을 사용하여 표현하거나, 뭉치목록에서
+드래그&드롭으로 중첩시킬 수 있습니다. 이와같이 중첩된 뭉치를 `자식뭉치` 라고 하고, 자식뭉치의
+상위에 있는 뭉치를 `부모뭉치`라고 부릅니다.
 
-Anki starts with a deck called “default”; any cards which have somehow
-become separated from other decks will go here. Anki will hide the
-default deck if it contains no cards and you have added other decks.
-Alternatively, you may rename this deck and use it for other cards.
+Anki는 `기본`이라는 뭉치로 시작합니다. 어떠한 뭉치에도 속하지 않은 카드는, 이곳으로 들어갑니다.
+기본뭉치에 카드가 없거나 다른 뭉치가 추가된 경우에는 Anki는 기본뭉치를 숨깁니다.
+또는 이 뭉치의 이름을 바꾸어 다른 카드에 사용할 수도 있습니다.
 
-Decks are best used to hold broad categories of cards, rather than
-specific topics such as “food verbs” or “lesson 1”. For more info on
-this, please see the [using decks appropriately](editing.md#using-decks-appropriately) section.
+뭉치는 "음식 단어" 나 "레슨 1"과 같은 다양한 카테고리의 카드를 정리하는데 적합합니다.
+이에 대한 자세한 내용은 [뭉치를 적절하게 사용하기](editing.md#using-decks-appropriately) 섹션을 참고하여 주세요.
 
-For information on how decks affect the order cards are displayed in,
-please see the [display order](studying.md#display-order) section.
+덱이 표시되는 카드 순서에 미치는 영향에 대해서는, [표기 순서](studying.md#display-order) 섹션을 참조하십시오.
 
-### Notes & Fields
+### 노트 & 필드
 
-When making flashcards, it’s often desirable to make more than one card
-that relates to some information. For example, if you’re learning
-French, and you learn that the word “bonjour” means “hello”, you may
-wish to create one card that shows you “bonjour” and asks you to
-remember “hello”, and another card that shows you “hello” and asks you
-to remember “bonjour”. One card is testing your ability to recognize the
-foreign word, and the other card is testing your ability to produce it.
+플래시 카드를 만들때는, 하나의 카드보다는 여러장의 카드를 만드는 것이 바람직합니다.
+예를들어 일본어를 배우고 있을때 `こんにちわ(곤니치와)`가 `안녕`을 뜻하는 것을 학습하기 위해
+`こんにちわ(곤니치와)`를 보여주고 `안녕`을 기억하도록 하는 카드와, 
+`안녕`을 보여주고 `こんにちわ(곤니치와)`를 기억하도록 하는 카드를 만들 수 있습니다.
+하나는 외국어를 인식하는 능력을 테스트하고, 다른 하나는 외국어 단어를 생성하는 능력을
+테스트하는 것입니다.
 
-When using paper flashcards, your only option in this case is to write
-out the information twice, once for each card. Some computer flashcard
-programs make life easier by providing a feature to flip the front and
-back sides. This is an improvement over the paper situation, but there
-are two major downsides:
+종이 플래시카드를 이용하는 경우에는 이를 위해서 카드마다 한번씩 총 2번을 작성하는 방법밖에
+없습니다. 하지만 플래시 카드 프로그램은 앞면과 뒷면을 뒤집는 기능을 제공함으로써 더욱 쉽게
+만들도록 도와줍니다. 이는 종이 플래시카드를 개선한 것이지만, 두가지 단점이 존재합니다.
 
-- Because such programs don’t track your performance of recognition
-  and production separately, cards will tend not to be shown to you at
-  the optimum time, meaning you forget more than you’d like, or you
-  study more than is necessary.
+- 이러한 프로그램은 인식과 생성의 성과를 개별적으로 추적하지 않기 때문에 카드는 최적의
+시간에 표시되지 않는 경향이 있습니다. 즉, 원하는 것보다 더 많은 것을 잊거나 필요한 것보다
+더 많이 공부하게 됩니다.
 
-- Reversing the question and answer only works when you want exactly
-  the same content on each side. This means it’s not possible to
-  display extra info on the back of each card for example.
+- 이러한 방식은 질문과 대답이 완전히 동일할때만 정상적으로 동작합니다. 예를 들어 각 카드의 뒷면에 추가 정보를 표시할 수 없습니다.
 
-Anki solves these problems by allowing you to split the content of your
-cards up into separate pieces of information. You can then tell Anki
-which pieces of information you want on each card, and Anki will take
-care of creating the cards for you and updating them if you make any
-edits in the future.
+Anki는 카드를 분활함으로써 이러한 문제를 해결하였습니다. Anki에 각 카드의 형태를 설정하면,
+카드 추가 및 업데이트시 Anki 는 자동으로 학습할 카드목록을 업데이트 합니다.
 
-Imagine we want to study French vocabulary, and we want to include the
-page number on the back of each card. We want our cards to look like
-this:
+우리가 일본어 단어를 학습하고 있고 각 카드의 뒷면에 해당하는 페이지 번호를 포함하고 싶다고
+다음과 같이 상상하여 보세요:
 
-    Q: Bonjour
-    A: Hello
-       Page #12
+    Q: こんにちわ
+    A: 안녕
+       페이지 #12
 
-And:
+외국어 단어를 생성하는 능력을 테스트하는 카드:
 
-    Q: Hello
-    A: Bonjour
-       Page #12
+    Q: 안녕
+    A: こんにちわ
+       페이지 #12
 
-In this example, we have three pieces of related information: a French
-word, an English meaning, and a page number. If we put them together,
-they’d look like this:
+이 예제에서는 3개의 정보가 있습니다: 일본어, 한국어, 페이지. 만약 이 정보를 합치면
+다음과 같이 됩니다:
 
-    French: Bonjour
-    English: Hello
-    Page: 12
+    일본어: こんにちわ
+    한국어: 안녕
+    페이지: 12
 
-In Anki, this related information is called a 'note', and each piece of
-information is called a 'field'. So we can say that this type of note
-has three fields: French, English, and Page.
+Anki에서는 이러한 정보를 `노트`라고 하며 각각의 정보를 `필드`라고 합니다.
+이 노트에는 3가지 필드가 있습니다: 일본어, 한국어, 페이지
 
-To add and edit fields, click the “Fields…​” button while adding or
-editing notes. For more information on fields, please see the
-[Customizing Fields](editing.md#customizing-fields) section.
+필드를 추가 및 편집하려면 노트를 추가하거나 편집하는 동안 `필드...`버튼을 클릭합니다.
+필드에 관한 자세한 설명은 [필드 커스터마이징](editing.md#필드-커스터마이징) 섹션을 참고하세요.
 
-### Card Types
+### 카드 타입
 
 In order for Anki to create cards based on our notes, we need to give it
 a blueprint that says which fields should be displayed on the front or
@@ -216,7 +189,7 @@ new users, but in the long run it’s recommended you define your own note
 types for the content you are learning. The standard note types are as
 follows:
 
-**Basic** 
+**Basic**
 Has Front and Back fields, and will create one card. Text you enter in
 Front will appear on the front of the card, and text you enter in Back
 will appear on the back of the card.
@@ -225,13 +198,13 @@ will appear on the back of the card.
 Like Basic, but creates two cards for the text you enter: one from
 front→back and one from back→front.
 
-**Basic (optional reversed card)** 
+**Basic (optional reversed card)**
 This is a front→back card, and optionally a back→front card. To do this,
 it has a third field called “Add Reverse.” If you enter any text into
 that field, a reverse card will be created. More information about this
 is available in the [Cards and Templates](templates/intro.md) section.
 
-**Basic (type in the answer)** 
+**Basic (type in the answer)**
 This is essentially Basic, with an extra text box on the front where you
 can type your answer in, after flipping to the back your input would be
 checked and compared with the answer. More information is available in the
@@ -271,10 +244,10 @@ someone has shared:
 1. Click the “Get Shared” button at the bottom of the deck list.
 
 2. When you’ve found a deck you’re interested in, click the “Download”
-    button to download a deck package.
+   button to download a deck package.
 
 3. Double-click on the downloaded package to load it into Anki, or
-    File→Import it.
+   File→Import it.
 
 Please note that it’s not currently possible to add shared decks
 directly to your AnkiWeb account. You need to import them with the

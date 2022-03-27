@@ -1,11 +1,11 @@
-# Exporting
+# 내보내기
 
 <!-- toc -->
 
 Exporting allows you to save part of your collection as a text file or
 packaged Anki deck. To export, click the File menu and choose 'Export'.
 
-## Text Files
+## 텍스트 파일
 
 If you choose "Notes in Plain Text", Anki will write the contents of the
 notes into a text file. Each field is separated by a tab. If you edit
@@ -22,7 +22,7 @@ add-on to make this easier.)
 In order for formatting to be preserved when you import text back in,
 the text is exported with all the HTML formatting embedded in it.
 
-## Packaged Decks
+## 뭉치 패키지
 
 A 'packaged deck' consists of cards, notes, note types, and any sounds or
 images bundled up into a file ending with .apkg or .colpkg. You can use
@@ -49,7 +49,7 @@ devices.
 Existing media in your collection is not deleted when you import a
 collection package. To delete unused media, use Tools&gt;Check Media.
 
-### Deck (.apkg)
+### 뭉치 (.apkg)
 
 Deck packages contain a single deck (and any child decks it may have).
 They have a filename ending with .apkg, but a filename other than

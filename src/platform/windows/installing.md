@@ -1,28 +1,24 @@
-# Installing & Upgrading Anki on Windows
+# 설치 & Windows의 Anki 업그레이드
 
 <!-- toc -->
 
-## Requirements
+## 요구 사항
 
-Recent Anki releases require a computer running the 64 bit version of Windows
-7, 8, 10 or 11.
+최신 Anki 버전은 윈도우 7, 8, 10 or 11 64비트 버전을 요구합니다.
 
-The last Anki release that supported 32 bit Windows was Anki 2.1.35-alternate.
-If you're on an old machine, you can obtain the old release from the [releases
-page](https://github.com/ankitects/anki/releases).
+마지막으로 32비트를 지원하는 버전은 Anki 2.1.35-alternate 입니다.
+만약 오래된 컴퓨터를 사용하는 경우, [릴리즈 페이지](https://github.com/ankitects/anki/releases) 에서 이전 버전을 확인하실 수 있습니다. 
 
-## Installing
+## 설치
 
-To install Anki:
+Anki를 설치하려면:
 
-1. Download Anki from <https://apps.ankiweb.net>
-2. Save the installer to your desktop or downloads folder.
-3. Double-click on the installer to run it. If you see an error
-message, please see the links on the left.
-4. Once Anki is installed, double-click on the new star icon on your
-desktop to start Anki.
+1. <https://apps.ankiweb.net> 에서 Anki 다운로드.
+2. 바탕화면 또는 다운로드 폴더에 installer를 설치.
+3. 더블클릭하여 installer를 설치합니다. 만약 오류 메시지가 뜬다면, 왼쪽의 링크를 참고하세요.
+5.  Anki가 설치되면, 바탕화면의 Anki 를 더블클릭하여 실행할 수 있습니다.
 
-## Upgrading
+## 업그레이드
 
 If upgrading from Anki 2.1.6+, there is no need to uninstall the previous
 version first. All you need to do is close Anki if it is open, and then follow
@@ -36,7 +32,7 @@ data.
 If you wish to downgrade to a previous version, please make sure you
 [downgrade first](http://changes.ankiweb.net).
 
-## Add-on Compatibility
+## 에드온 호환성
 
 Some add-ons have not been updated to support the latest Anki release yet. If an
 add-on you depend on has not been ported to the latest release yet, you may have

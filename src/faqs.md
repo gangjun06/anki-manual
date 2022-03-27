@@ -1,3 +1,3 @@
-# Frequently Asked Questions
+# 자주 묻는 질문
 
-Please see <https://faqs.ankiweb.net>
+<https://faqs.ankiweb.net> 을 확인하세요.

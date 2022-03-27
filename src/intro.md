@@ -1,13 +1,13 @@
-# Introduction
+# 소개
 
-## Quickstart
+## 빠른 시작
 
-In a hurry? Jump straight to [Getting Started](getting-started.md).
+바쁘신가요? 바로 [시작하기](getting-started.md)로 가보세요.
 
-## Translations
+## 번역
 
-Volunteers have contributed translations of this manual. The
-translations may not always be up to date.
+다양한 기여자들이 여러 언어로 문서를 번역하였습니다.
+단 아래의 번역이 항상 최신인 것은 아닙니다.
 
 - [Bahasa Indonesia](https://apps.ankiweb.net/docs/manual.id.html)
 - [Deutsch](http://www.dennisproksch.de/anki)
@@ -22,5 +22,9 @@ translations may not always be up to date.
 - [日本語](http://wikiwiki.jp/rage2050/?FrontPage)
 - [简体中文](http://www.ankichina.net/manual/anki/)
 
-If you would like to help translate the manual into a different language,
-please see the [translation docs](https://translating.ankiweb.net/anki/manual.html).
+만약 이 문서를 다른 언어로 번역하는 것을 돕고 싶으시면,
+이 [번역 가이드](https://translating.ankiweb.net/anki/manual.html)를 참고하세요.
+
+---
+
+현재 보고계시는 번역은, [gangjun06/anki-manual](https://github.com/gangjun06/anki-manual)에서 수정하실 수 있습니다.

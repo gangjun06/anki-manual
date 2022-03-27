@@ -1,163 +1,136 @@
-# Searching
+# 검색
 
 <!-- toc -->
 
-Anki's Browse screen and the Filtered Deck feature use a common method
-of searching for specific cards/notes.
+Anki의 `탐색` 화면과 `뭉치 필터` 기능은 일반적인 방법으로 특정 카드/노트를 검색합니다.
 
-## Simple searches
+## 간단한 검색
 
-When you type some text into the search box, Anki finds matching notes
-and displays their cards. Anki searches in all fields of the notes, but
-does not search for tags (see later in this section for how to search
-for tags). Some examples:
+검색 상자에 텍스트를 입력하면 Anki가 일치하는 노트를 찾아 해당 카드를 표시합니다. Anki는 노트의 모든 필드를 검색하지만 태그를 검색하지는 않습니다(태그를 검색하는 방법은 이 섹션의 뒷부분을 참조하십시오). 
+몇 가지 예:
 
 `dog`  
-search for "dog" - will match words like "doggy" and "underdog" too.
+"dog"를 포함하고 있는 노트를 찾습니다. (예: "dog", "doggy", "underdog")
 
 `dog cat`  
-finds notes that have both "dog" and "cat" on them, such as "raining
-cats and dogs".
+"dog"와 "cat" 을 둘다 포함하고 있는 노트를 찾습니다. (예: "raining cats and dogs")
 
 `dog or cat`  
-finds notes with either "dog" or "cat".
+"dog"또는 "cat"이 포함된 노트를 찾습니다.
 
 `dog (cat or mouse)`  
-finds notes with dog and cat, or dog and mouse.
+"dog"와 "cat"이 포함된 노트 또는 "dog"와 "mouse"가 포함된 노트를 찾습니다.
 
 `-cat`  
-finds notes without the word "cat".
+"cat"이 포함되지 않은 노트를 찾습니다.
 
 `-cat -mouse`  
-finds notes with neither "cat" nor "mouse".
+"cat"과 "mouse"가 포함되지 않은 노트를 찾습니다.
 
 `-(cat or mouse)`  
-same as the above.
+"-cat -mouse"와 동일함
 
 `"a dog"`  
-finds notes with the exact sequence of characters "a dog" on them, such
-as "atta dog", but not "dog a" or "adog".
+"atta dog", "a dog"와 같이 정확한 순서를 가진 노트를 찾습니다. ("dog a", "adog"등은 찾지 않습니다.)
 
 `-"a dog"`  
-finds notes without the exact phrase "a dog"
+"a dog"라는 정확한 문구가 없는 노트를 찾습니다.
 
 `d_g`  
-finds notes with d, &lt;a letter&gt;, g, like dog, dig, dug, and so on.
+d,&lt;아무 문자(한글자),&gt;,g 와 같은 노트를 찾습니다. (예: "dog", "dig", "dug")
 
 `d*g`  
-finds notes with d, &lt;zero or more letters&gt;, g, like dg, dog, dung,
-etc.
+d,&lt;아무 문자(한글자 이상)또는 공백,&gt;,g 와 같은 노트를 찾습니다. (예: "dg", "dog", "dung")
 
 `w:dog`  
-search for "dog" on a word boundary - will match "dog", but not "doggy"
-or "underdog". Requires Anki 2.1.24+ or AnkiMobile 2.1.61+.
+단어에서 "dog"를 찾습니다. ("dog"는 검색되지만, "doggy", "underdog"등은 검색되지 않습니다)
+Anki 2.1.24+ 또는 AnkiMobile 2.1.61+ 버전이 필요합니다.
 
 `w:dog*`  
-will match "dog" and "doggy", but not "underdog".
+"dog"와 "doggy"는 검색되지만 "underdog"는 안됩니다.
 
 `w:*dog`  
-will match "dog" and "underdog", but not "doggy".
+"dog"와 "underdog"는 검색되지만 "doggy"는 안됩니다.
 
-Things to note from the above:
+상기 내용에 대한 설명:
 
-- Search terms are separated by spaces.
+- 검색어는 공백으로 구분됩니다.
 
-- When multiple search terms are provided, Anki looks for notes that
-  match all of the terms - an implicit 'and' is inserted between each
-  term. On Anki 2.1.24+ and AnkiMobile 2.0.60+ you can be explicit
-  if you like ("dog and cat" is the same as "dog cat"), but older
-  Anki versions will treat "and" as just another word to search for.
+- 여러 검색어가 제공되는 경우 Anki는 모든 용어와 일치하는 노트를 찾습니다. 각 용어 사이에 암묵적인 'and'가 삽입됩니다. Anki 2.1.24+ 및 Anki Mobile 2.0.60+에서는 "cat and dog"는 "dog cat"과 동일하지만 오래된 Anki 버전은 "and"를 검색해야 하는 다른 단어로 취급합니다.
 
-- You can use "or" if you only need one of the terms to match.
+- 여러개중 하나만 일치해도 되는 경우 "or"을 사용할 수 있습니다.
 
-- You can prepend a minus sign to a term to find notes that don’t
-  match.
+- 검색어에 마이너스 기호를 추가하여 일치하지 않는 노트를 찾을 수 있습니다..
 
-- You can group search terms by placing them in parentheses, as in the
-  **dog (cat or mouse)** example. This becomes important when
-  combining OR and AND searches — in the example, with the
-  parentheses, it matches either 'dog cat' or 'dog mouse', whereas
-  without them it would match either 'dog and cat' or 'mouse'.
+- `cat(cat or mouse)`와 같이 괄호 안에 검색어를 넣어 그룹화할 수 있습니다. 이것은 OR과 AND 검색을 조합할 때 중요합니다. 예를 들어 괄호 안에 'dog cat' 또는 'dog mouse'가 있으면 'dog and cat' 또는 'mouse'와 일치합니다.
 
-- Anki is only able to search within formatting in the [sort
-  field](editing.md#customizing-fields) you’ve configured. For example, if you add
-  "**exa**mple" to one of your fields, this will not be matched when
-  searching for "example" unless that field is the sort field. If a
-  word is not formatted, or the formatting does not change in the
-  middle of the word, then Anki will be able to find it in any field.
+- Anki는 설정한 [필드 정렬](editing.md#customizing-fields)의 포맷 내에서만 검색할 수 있습니다. 예를 들어 필드 중 하나에 `exa*mple"`을 추가하면 해당 필드가 정렬 필드가 아닌 경우 "example"을 검색할 때 일치하지 않습니다. 단어의 형식이 지정되지 않았거나 단어의 중간 형식이 변경되지 않으면 Anki는 모든 필드에서 해당 단어를 찾을 수 있습니다.
 
-- Standard searches are case insensitive for Latin characters - a-z will
-  match A-Z, and vice versa. Other characters such as Cyrillic are case sensitive
-  in a standard search, but can be made case insensitive by searching on a word
-  boundary or regular expression (`w:`, `re:`).
+- 표준 검색에서는 대소문자를 구분하지 않습니다.a-z는 A-Z와 일치하며, 그 반대도 마찬가지입니다. 키릴 문자와 같은 다른 문자는 표준 검색에서는 대소문자를 구분하지만 단어 검색이나 정규 표현식(`w:`,`re:`)을 사용하면 대소문자를 구분하지 않습니다.
 
-## Limiting to a field
+## 필드로 제한
 
-You can also ask Anki to match only if a particular field contains some
-text. Unlike the searches above, searching on fields requires an 'exact
-match' by default.
+특정 필드에 일부 텍스트가 포함된 경우에만 Anki에게 일치하도록 요청할 수 있습니다. 위의 검색과 달리 필드를 검색하려면 기본적으로 '정확한 일치'가 필요합니다.
 
 `front:dog`  
-find notes with a Front field of exactly "dog". A field that says "a
-dog" will not match.
+Front 필드가 정확히 "dog"인 노트를 찾습니다. "a dog"라고 하는 필드는 일치하지 않습니다.
 
 `front:*dog*`  
-find notes with Front field containing dog somewhere
+Front 필드 내에서 "dog"가 포함된 노트를 찾습니다.
 
 `front:`  
-find notes that have an empty Front field
+전면 필드가 비어 있는 노트를 찾습니다.
 
 `front:_*`  
-find notes that have a non-empty Front field
+전면 필드가 비어 있지 않은 노트를 찾습니다.
 
 `front:*`  
-find notes that have a Front field, empty or not
+전면 필드가 비어 있는지 여부에 관계없이 노트를 찾습니다.
 
 `fr*:text`
-find notes in a field starting with "fr". Requires Anki 2.1.24+ or AnkiMobile 2.1.60+.
+"fr"로 시작하는 필드에서 노트를 찾습니다.  Anki 2.1.24+ 또는 AnkiMobile 2.1.60+ 의 버전이 필요합니다.
 
-## Tags, decks, cards and notes
+## 태그, 뭉치, 카드 및 노트
 
 `tag:animal`  
-find notes with the tag "animal", or subtags like "animal::mammal"
+"animal" 또는 "animal::"과 같은 하위 태그가 있는 노트를 찾습니다.
 
 `tag:none`  
-find notes with no tags
+태그가 붙어 있지 않은 노트를 찾습니다.
 
 `tag:ani*`  
-find notes with tags starting with ani
+"ani"로 시작하는 태그가 있는 노트를 찾습니다.
 
 `deck:french`  
-find cards in a French deck, or subdecks like French::Vocab
+"french" 뭉치 또는 "french::Vocab"와 같은 하위 뭉치에서 카드를 찾습니다.
 
 `deck:french -deck:french::*`  
-find cards in French, but not subdecks
+"french" 뭉치에 있는 카드를 찾지만 하위 뭉치는 찾지 않습니다.
 
 `deck:"french vocab"`  
-searching when a deck has a space
+뭉치에 띄어쓰기가 있을경우 쌍따움표를 사용합니다.
 
 `"deck:french vocab"`  
-also ok
+이러한 방식도 위와 같습니다.
 
 `deck:filtered`  
-filtered decks only
+필터링된 뭉치만 찾습니다.
 
 `-deck:filtered`  
-normal decks only
+필터링되지 않은 뭉치만 찾습니다.
 
 `card:forward`  
-search for Forward cards
+Forward 카드를 찾습니다.
 
 `card:1`  
-search for cards by template number - eg, to find the second cloze
-deletion for a note, you’d use `card:2`
+템플릿 번호로 카드 검색 - 예를 들어 노트의 두 번째 삭제 부분을 찾으려면 `card:2`를 사용합니다.
 
 `note:basic`  
-search for cards with a Basic note type
+"basic"노트타입을 가진 카드를 찾습니다.
 
-## Ignoring accents/combining characters
+## 악센트 무시/문자 조합
 
-Requires Anki 2.1.24+ or AnkiMobile 2.0.60+.
+Anki 2.1.24 또는 AnkiMobile 2.0.60 이상의 버전이 필요함.
 
 You can use `nc:` to remove combining characters ("no combining"). For example:
 
@@ -169,7 +142,7 @@ matches "は", "ば", and "ぱ"
 
 Searches that ignore combining characters are slower than regular searches.
 
-## Regular expressions
+## 정규식
 
 Anki 2.1.24+ and AnkiMobile 2.0.60+ support searching in notes with "regular expressions",
 a standard and powerful way of searching in text.
@@ -211,7 +184,7 @@ Some things to be aware of:
   use the HTML editor in the editing screen to see the underlying HTML contents.
 - For the specifics of Anki's regex support, please see the regex crate documentation: <https://docs.rs/regex/1.3.9/regex/#syntax>
 
-## Card state
+## 카드 상태
 
 `is:due`  
 review cards and learning cards waiting to be studied
@@ -294,24 +267,22 @@ cards easier or harder than default
 
 ## Recent Events
 
-### Added
+### 추가됨
 
 `added:1`  
-cards added today
+오늘 추가된 카드
 
 `added:7`  
-cards added in last week
+지난 1주일간 추가된 카드
 
-The check is made against card creation time rather than note creation
-time, so cards that were generated within the time frame will be
-included even if their notes were added a long time ago.
+노트 추가 시간이 아닌 카드 추가 시간에 대해 체크하기 때문에 오래 전에 노트를 추가했더라도 기간 내에 생성된 카드가 포함됩니다.
 
-### Edited
+### 수정됨
 
 `edited:n`  
-cards where the note text was added/edited in the last n days.
+지난 n일 동안 노트 텍스트가 추가/삭제된 카드.
 
-This requires Anki 2.1.28+ / AnkiMobile 2.0.64+.
+Anki 2.1.28 / AnkiMobile 2.0.64 이상의 버전이 필요함.
 
 ### Answered
 

@@ -1,9 +1,9 @@
 [book]
-authors = ["Ankitects Pty Ltd and contributors"]
-language = "en"
+authors = ["Gangjun and contributors"]
+language = "ko"
 multilingual = false
 src = "src"
-title = "Anki Manual"
+title = "Anki 설명서"
 
 [build]
 create-missing = true
@@ -13,8 +13,8 @@ command = "mdbook-toc"
 renderer = ["html"]
 
 [output.html]
-git-repository-url = "https://github.com/ankitects/anki-manual/"
-cname = "docs.ankiweb.net"
+git-repository-url = "https://github.com/gangjun06/anki-manual/"
+cname = "anki-ko.gangjun.dev"
 additional-css = ["css/kbd.css"]
 
 [output.linkcheck]

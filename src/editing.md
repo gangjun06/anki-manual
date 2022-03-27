@@ -53,7 +53,7 @@ Anki does not check for duplicates in other fields automatically for
 efficiency reasons, but the browser has a "Find Duplicates" function,
 which you can run periodically.
 
-###  Effective Learning
+### Effective Learning
 
 Different people like to review in different ways, but there are some
 general concepts to keep in mind. An excellent introduction is [this
@@ -105,7 +105,7 @@ material that you are studying is a good choice here – things like "Japanese",
 "Trivia", and so on. Once you have chosen a name, close the Note Types
 window, and you will return to the adding window.
 
-## Customizing Fields
+## 필드 커스터마이징
 
 To customize fields, click the "Fields…​" button when adding or editing
 a note, or while the note type is selected in the Manage Note Types
@@ -185,8 +185,8 @@ this is not recommended, for the following reasons:
 ### Using Tags
 
 Instead of creating lots of little decks, it's a better idea to use tags
-and/or fields to classify your content. Tags are a useful way to boost 
-search results, find specific content, and keep your collection 
+and/or fields to classify your content. Tags are a useful way to boost
+search results, find specific content, and keep your collection
 organized.
 There are many ways of using tags and flags effectively, and
 thinking in advance about how you want to use them will help you decide
@@ -194,16 +194,16 @@ what will work best for you.
 
 Some people prefer using decks and subdecks to keep their cards organized,
 but using tags have a big advantage over decks for that: you can add several
-tags to a single note, but a single card can only belong to one deck, which 
-makes tags a more powerful and flexible categorization system than 
+tags to a single note, but a single card can only belong to one deck, which
+makes tags a more powerful and flexible categorization system than
 decks in most cases. You can also organize tags in trees [in the same way
 as you can do for decks](getting-started.md#decks).
 
-For example, instead of creating a "food verbs" deck, you could add those 
+For example, instead of creating a "food verbs" deck, you could add those
 cards to your main language study deck, and tag the cards with "food" and
-"verb". Since each card can have multiple tags, you can do things like 
-[search](searching.md#tags-decks-cards-and-notes) for all verbs, or all 
-food-related vocabulary, or all verbs that are related to food. 
+"verb". Since each card can have multiple tags, you can do things like
+[search](searching.md#tags-decks-cards-and-notes) for all verbs, or all
+food-related vocabulary, or all verbs that are related to food.
 
 You can add tags from the Edit window and from the [Browser](browsing.md), and you can also add,
 delete, rename, or organize tags there. Please note that
@@ -213,29 +213,27 @@ but not its siblings, you should consider using flags instead.
 
 ### Using Flags
 
-Flags are similar to tags, but they will appear during study in the review 
-window, showing a colored flag icon on the upper right area of the screen. 
-You can also search for flagged cards in the Browse screen, rename flags 
-from the browser and create filtered decks from flagged cards, but unlike tags, 
+Flags are similar to tags, but they will appear during study in the review
+window, showing a colored flag icon on the upper right area of the screen.
+You can also search for flagged cards in the Browse screen, rename flags
+from the browser and create filtered decks from flagged cards, but unlike tags,
 a single card can have only one flag at a time. Another important difference
-is that flags work at [card](getting-started.md#cards) level, so flagging a card that have siblings 
-won't have any effect on the card's siblings. 
+is that flags work at [card](getting-started.md#cards) level, so flagging a card that have siblings
+won't have any effect on the card's siblings.
 
-You can flag / unflag cards directly while in review mode (by pressing 
-<kbd>CTRL</kbd> + <kbd>1-7</kbd> on Windows or <kbd>CMD</kbd> + <kbd>1-7</kbd> on Mac) 
+You can flag / unflag cards directly while in review mode (by pressing
+<kbd>CTRL</kbd> + <kbd>1-7</kbd> on Windows or <kbd>CMD</kbd> + <kbd>1-7</kbd> on Mac)
 and from the [Browser.](browsing.md)
-
 
 ### The "Marked" Tag
 
 Anki treats a tag called "marked" specially. There are options in the review
-screen and browse screen to add and remove the "marked" tag. The review screen 
-will show a star when the current card's note has that tag. And cards are 
+screen and browse screen to add and remove the "marked" tag. The review screen
+will show a star when the current card's note has that tag. And cards are
 shown in a different color in the browse screen when their note is marked.
 
-Note: Marking is mainly left around for compatibility with older Anki 
+Note: Marking is mainly left around for compatibility with older Anki
 versions; most users will want to use flags instead.
-
 
 ### Using Fields
 
@@ -247,7 +245,7 @@ for.
 
 ### Custom Study and Filtered Decks
 
-Using [custom study and filtered deck](filtered-decks.md) you can create 
+Using [custom study and filtered deck](filtered-decks.md) you can create
 temporary decks out of search
 terms. This allows you to review your content mixed together in a single
 deck most of the time (for optimum memory), but also create temporary
@@ -255,7 +253,7 @@ decks when you need to focus on particular material, such as before a
 test. The general rule is that if you always want to be able to study
 some content separately, it should be in a normal deck; if you only
 occasionally need to be able to study it separately (for a test, when
-under a backlog, etc.), then filtered decks created from tags, flags, 
+under a backlog, etc.), then filtered decks created from tags, flags,
 marks or fields are better.
 
 ## Editing Features
@@ -273,7 +271,7 @@ chemical compounds like H<sub>2</sub>O or simple mathematical equations like
 x<sup>2</sup>.
 
 The rubber eraser button clears any formatting in the currently selected text — including the colour
-of the text,  whether the selected text is bold, etc.
+of the text, whether the selected text is bold, etc.
 
 The next three buttons allow creating lists, text alignment and text indent.
 Then, there are two buttons to allow you to change text colour.
@@ -433,7 +431,7 @@ page](http://dotancohen.com/howto/rtl_right_to_left.html) for more
 information.
 
 The toolkit on which Anki is built has trouble dealing with a few input
-methods, such as holding down keys to select accented characters on macOS, 
+methods, such as holding down keys to select accented characters on macOS,
 and typing characters by holding down the <kbd>Alt</kbd> key and typing a
 numeric code on Windows.
 
