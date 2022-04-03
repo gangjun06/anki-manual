@@ -6,7 +6,7 @@ Anki의 `탐색` 화면과 `뭉치 필터` 기능은 일반적인 방법으로 �
 
 ## 간단한 검색
 
-검색 상자에 텍스트를 입력하면 Anki가 일치하는 노트를 찾아 해당 카드를 표시합니다. Anki는 노트의 모든 필드를 검색하지만 태그를 검색하지는 않습니다(태그를 검색하는 방법은 이 섹션의 뒷부분을 참조하십시오). 
+검색 상자에 텍스트를 입력하면 Anki가 일치하는 노트를 찾아 해당 카드를 표시합니다. Anki는 노트의 모든 필드를 검색하지만 태그를 검색하지는 않습니다(태그를 검색하는 방법은 이 섹션의 뒷부분을 참조하십시오).
 몇 가지 예:
 
 `dog`  
@@ -88,7 +88,7 @@ Front 필드 내에서 "dog"가 포함된 노트를 찾습니다.
 전면 필드가 비어 있는지 여부에 관계없이 노트를 찾습니다.
 
 `fr*:text`
-"fr"로 시작하는 필드에서 노트를 찾습니다.  Anki 2.1.24+ 또는 AnkiMobile 2.1.60+ 의 버전이 필요합니다.
+"fr"로 시작하는 필드에서 노트를 찾습니다. Anki 2.1.24+ 또는 AnkiMobile 2.1.60+ 의 버전이 필요합니다.
 
 ## 태그, 뭉치, 카드 및 노트
 
@@ -128,144 +128,138 @@ Forward 카드를 찾습니다.
 `note:basic`  
 "basic"노트타입을 가진 카드를 찾습니다.
 
-## 악센트 무시/문자 조합
+## 악센트/문자 조합 무시
 
 Anki 2.1.24 또는 AnkiMobile 2.0.60 이상의 버전이 필요함.
 
-You can use `nc:` to remove combining characters ("no combining"). For example:
+`nc:`를 사용하여 결합 문자를 제거할 수 있습니다. 예를 들어 다음과 같습니다:
 
 `nc:uber`  
-matches notes with "uber", "über", "Über" and so on.
+"uber", "über", "Über"와 같은 단어가 검색될 수 있습습니다.
 
 `nc:は`  
-matches "は", "ば", and "ぱ"
+"は", "ば", "ぱ" 와 같은 단어와 매치됩니다.
 
-Searches that ignore combining characters are slower than regular searches.
+(문자 조합을 무시하는 검색은 일반 검색보다 속도가 느립니다)
 
 ## 정규식
 
-Anki 2.1.24+ and AnkiMobile 2.0.60+ support searching in notes with "regular expressions",
-a standard and powerful way of searching in text.
+노트를 정규식으로 검색하기 위해서는 Anki 2.1.24 또는 AnkiMobile 2.0.60 이상의 버전이 필요합니다
 
-Start a search with `re:` to search by regular expression. To make things easier, Anki will
-treat the following as [raw input](#raw-input), so bear in mind the rules listed there.
+정규식으로 검색하려면 `re:`로 검색을 시작합니다. Anki는 간단하게 하기 위해서 이하를 [원시 입력](#원시-입력)으로서 취급하기 때문에, 거기에 기재되어 있는 룰에 주의해 주세요.
 
-Some examples:
+몇몇 예제:
 
 `"re:(some|another).*thing"`  
-find notes that have "some" or "another" on them, followed by 0 or more characters, and then "thing"
+"some" 또는 "other"가 있고 0자 이상의 문자가 있는 후 "thing"가 나오는 단어를 찾습니다.
 
 `re:\d{3}`  
-find notes that have 3 digits in a row
+3자리의 숫자가 있는 노트를 찾습니다.
 
-Regular expressions can also be limited to a specific field. Please note that unlike the normal searches
-in a specific field, regular expressions in fields don't require an exact match. Eg:
+정규 표현식은 특정 필드 검색도 가능합니다.
+특정 필드의 일반 검색과 달리 필드의 정규 표현식은 정확히 일치할 필요가 없습니다. 예:
 
 `front:re:[a-c]1`  
-matches uppercase or lowercase a1, B1 or c1 that occurs anywhere in the "Front" field
+"Front"필드 내에서 대문자 또는 소문자 a1, B1, c1에 해당하는 글자를 찾습니다.
 
 `front:re:^[a-c]1$`  
-like the above, but will not match if any other text falls before or after a1/b1/c1.
+위와 같으나 다른 텍스트가 a1/b1/c1 앞 또는 뒤에 있으면 일치하지 않습니다.
 
-Anki 2.1.50 added regex support for tags:
+Anki 2.1.50 부터 정규식이 태그를 지원합니다:
 
 `tag:re:^parent$`  
-find notes with the exact tag "parent", disregarding any child tags like "parent::child"
+"parent:: child"와 같은 하위 태그를 무시하고 "parent" 태그가 정확히 지정된 노트를 찾습니다.
 
 `"tag:re:lesson-(1[7-9]|2[0-5])"`  
-find notes with tags "lesson-17" through "lesson-25"
+"lesson-17"에서 "lesson-25"사이의 태그를 가진 노트를 찾습니다.
 
-You can learn more about regular expressions here: <https://regexone.com/lesson/introduction_abcs>
+정규식에 대한 자세한 내용은 여기서 배울 수 있습니다: <https://regexone.com/lesson/introduction_abcs>
 
-Some things to be aware of:
+몇가지 주의할 점:
 
-- The search is case-insensitive by default; use `(?-i)` at the start to turn on case sensitivity.
-- Some text like spaces and newlines may be represented differently in HTML - you can
-  use the HTML editor in the editing screen to see the underlying HTML contents.
-- For the specifics of Anki's regex support, please see the regex crate documentation: <https://docs.rs/regex/1.3.9/regex/#syntax>
+- 검색에서는 기본적으로 대소문자를 구분하지 않습니다. 대소문자를 구분하려면 처음에 `(?-i)`를 사용합니다.
+- 공백이나 줄바꿈 같은 텍스트는 HTML에서 다르게 표시될 수 있습니다.
+  편집 화면에서 HTML 편집기를 사용하여 기본 HTML 내용을 볼 수 있습니다.
+- Anki의 regex 지원에 대한 자세한 내용은 regex crate 매뉴얼을 참조하십시오. <https://docs.rs/regex/1.3.9/regex/>
 
 ## 카드 상태
 
 `is:due`  
-review cards and learning cards waiting to be studied
+학습을 대기중인 새 카드와 복습 카드를 찾습니다.
 
 `is:new`  
-new cards
+새 카드
 
 `is:learn`  
-cards in learning
+학습중인 카드
 
 `is:review`  
-reviews (both due and not due) and lapsed cards
+복습 (만기일이 아닌것도 포함)카드와 만기된 카드들
 
 `is:suspended`  
-cards that have been manually suspended
+수동으로 무시된 카드
 
 `is:buried`  
-cards that have been buried, either [automatically](studying.md#siblings-and-burying) or
-manually
+[자동](studying.md#siblings-and-burying)또는 수동적으로 만료된 카드
 
-Note that with the [new scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-Anki now distinguishes between manually and automatically buried cards so you can
-unbury one set without the other.
+[new scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)에서는 Anki가 수동으로 추가된 카드와 자동으로 추가된 카드를 구분하므로 한 세트를 다른 세트 없이 해제할 수 있습니다.
 
-Cards that have lapsed fall into several of these categories, so it may
-be useful to combine them to get more precise results:
+기한이 지난 카드는 다음 중 몇 가지 카테고리로 분류되므로 보다 정확한 결과를 얻기 아래 검색어를 사용하는것이 도움이 될 수 있습니다.
 
 `is:learn is:review`  
-cards that have lapsed and are awaiting relearning
+기한이 만료되어 재학습 대기 중인 카드
 
 `-is:learn is:review`  
-review cards, not including lapsed cards
+유효기간이 지난 카드를 포함하지 않는 복습 카드
 
 `is:learn -is:review`  
-cards that are in learning for the first time
+처음 배우는 카드
 
 `flag:1`  
-cards with a red flag
+빨간 플래그를 설정한 카드
 
 `flag:2`  
-cards with an orange flag
+오렌지 플래그를 설정한 카드
 
 `flag:3`  
-cards with a green flag
+초록색 플래그를 설정한 카드
 
 `flag:4`  
-cards with a blue flag
+파란색 플래그를 설정한 카드
 
 `flag:5`  
-cards with a pink flag
+분홍색 플래그를 설정한 카드
 
 `flag:6`  
-cards with a turquoise flag
+청록색 플래그를 설정한 카드
 
 `flag:7`  
-cards with a purple flag
+보라색 플래그를 설정한 카드
 
-## Card properties
+## 카드 속성
 
 `prop:ivl>=10`  
-cards with interval of 10 days or more
+10일 이상의 간격을 가진 카드
 
 `prop:due=1`  
-cards due tomorrow
+학습일이 내일인 카드
 
 `prop:due=-1`  
-cards due yesterday that haven’t been answered yet
+학습일이 어제인 아직 대답하지 않은 카드
 
 `prop:due>-1 prop:due<1`  
-cards due between yesterday and tomorrow
+어제와 내일 사이에 학습일이 돌아오는 카드
 
 `prop:reps<10`  
-cards that have been answered less than 10 times
+답이 10회 미만인 카드
 
 `prop:lapses>3`  
-cards that have moved into relearning more than 3 times
+3회 이상 재학습에 들어간 카드
 
 `prop:ease!=2.5`  
-cards easier or harder than default
+기본보다 쉽거나 어려운 카드
 
-## Recent Events
+## 최근 이벤트
 
 ### 추가됨
 
@@ -284,98 +278,86 @@ cards easier or harder than default
 
 Anki 2.1.28 / AnkiMobile 2.0.64 이상의 버전이 필요함.
 
-### Answered
+### 대답됨
 
 `rated:1`  
-cards answered today
+오늘 대답된 카드
 
 `rated:1:2`  
-cards answered Hard (2) today
+오늘 어려움(2)으로 대답된 카드
 
 `rated:7:1`  
-cards answered Again (1) over the last 7 days
+7일동안 다시(1)으로 대답된 카드
 
 `rated:31:4`  
-cards answered Easy (4) in the last month
+지난 달동안 쉬움(4)으로 대답된 카드
 
-Rating searches had been limited to 31 days before version 2.1.39.
+2.1.39 이전 버전에서는 최대 31일 까지 난이도 검색을 할 수 있습니다.
 
-### First Answered
+### 첫번째 대답됨
 
-On version 2.1.45+, you can also search for the very first review only:
+버전 2.1.45 이상에서는 다음과 같이 첫 번째 복습만 검색할 수 있습니다:
 
 `introduced:1`  
-cards answered for the first time today
+오늘 처음으로 답한 카드
 
 `introduced:365`  
-cards answered for the first time within the last 365 days
+지난 1년간 처음 답한 카드
 
-## Matching special characters
+## 문자 이스케이프
 
-This section was written for Anki 2.1.36+ - earlier versions did not support escaping
-characters in certain situations.
+이 섹션은 Anki 2.1.36+ 용으로 작성되었습니다. 이전 버전에서는 특정 상황에서 이스케이프 문자를 지원하지 않았습니다.
 
-As shown in the previous section, some characters like `*`, `_` and `"` have a
-special meaning in Anki. If you need to locate those characters in a search,
-you need to tell Anki not to treat them specially.
+이전 섹션에서 볼 수 있듯이 `_`, `*`, `"` 와 같은 일부 문자는 Anki에서 특별한 의미를 갖고 있습니다. 검색에서 이러한 문자를 찾아야 할 경우에는 Anki에게 일반 문자처럼 취급하라고 말해주어야 합니다.
 
-- _Space_  
-  To match something including spaces, enclose the `"entire term"` in double
-  quotes. If it is a colon search, you also have the option to only quote the
-  `part:"after the colon"`.
+- _공백_  
+  공백을 포함하여 검색하려면 `"이러한 단어"`를 쌍따움표로 묶으십시오.
+  콜론 검색의 경우 콜론 후의 내용만 가져오는 옵션도 있습니다. `part:"after the colon"`
 
-- `"`, `*` and `_`  
-  Add a backslash before these characters to treat them literally. For example,
-  `_` will match any single character, but `\_` matches only an actual underscore.
+- `"`, `*`, `_`  
+  문자를 특별한 의미 없이 그대로 처리하려면 문자 앞에 백슬래시를 추가합니다.
+  예를들면, `_`는 임의의 단일 문자와 일치하지만 `\_`은 실제 언더바만 일치합니다.
 
 - `\`  
-  Because a backlash is used to remove the special meaning from other characters,
-  it too is treated specially. If you need to search for an actual backslash,
-  use `\\` instead of `\`.
+  백래시는 다른 문자에서 특별한 의미를 제거하기 위해 사용되기 때문에 백래시도 특별하게 취급됩니다.
+  실제 백슬래시를 검색할 필요가 있는 경우 `\` 대신 `\\`를 사용합니다.
 
-- `(` and `)`  
-  You can search for parentheses either by enclosing the full term in quotes,
-  and/or by using a backslash. That is, `"some(text)"`, `some\(text\)` and
-  `"some\(text\)"` are all equivalent, but `some(text)` is not.
-
+- `(` , `)`  
+  전체 검색어를 쌍따옴표로 묶거나 백슬래시를 사용하여 괄호를 검색할 수 있습니다.
+  즉, `"some(text)"` 와 `some\(text\)`는 모두 같으나 `some(text)`는 같지 않다.
 - `-`  
-  Starting a search term with `-` usually inverts it: `-dog` matches everything
-  except dog for example. If you instead wish to include an actual hyphen,
-  you can either use a backslash, or include the text in quotes, such as
-  `\-.-` or `"-.-"`.
+  예를들어 검색어를 `-dog`로 시작하면 `dog`가 포함되지 않은 모든 것을 검색합니다.
+  만약 실제 하이픈을 검색하고 싶으면, `\-.-`, `"-.-"` 와 같이 백슬래쉬를 사용하거나
+  쌍따움표를 사용할 수 있습니다.
 
 - `:`  
-  Colons have to be escaped unless they are preceded by another, unescaped colon.
-  So `w:e:b` is a word boundary search for `e:b`, `w\:e\:b` searches literally for
-  `w:e:b` and `w\:e:b` searches the field `w:e` for `b` (see
-  [field searches](#limiting-to-a-field)).
+  콜론은 다른 기능으로 사용되지 않기 위해선 이스케이프 되어야 합니다.
+  `w:e:b` -> `w\:e\:b`
 
-- `&`, `<`, and `>`  
-  `&`, `<`, and `>` are treated as HTML when searching in Anki, and as such searches
-  containing them don't work as expected. However, you can search for them by using their
-  corresponding HTML entity names (`&amp;` for `&`, `&lt;` for `<`, and `&gt;` for `>`).
-  For example, searching `&lt;&amp;text&gt;` searches for a card with `<&text>` in a field.
+- `&`, `<`, `>`  
+  `&`, `<`, `>`는 Anki에서 검색할때 html로 처리되며 제대로 동작하지 않습니다.
+  하지만 해당 글자를 검색하고 싶은 경우에는 `&`는 `&amp;`로, `<`는 `&lt;`로, `>`는 `&gt;`로 사용될 수 있습니다.
+  예를들어, `&lt;&amp;text&gt;`는 `<&text>` 를 의미합니다.
 
-### Raw input
+### 원시 입력
 
-Text preceded by certain keywords (like `re:`) will be treated as raw input. That is,
-the characters listed above largely lose their special meaning. In such a context, only
-a minimum of escaping is required to prevent ambiguity:
+특정 키워드(예: `re:`) 앞에 오는 텍스트는 원시 입력으로 처리됩니다.
+즉, 위에 열거된 검색 키워드들은 대부분 그 의미를 잃게됩니다.
+이러한 상황에서는 애매모호함을 방지하기 위해 최소한의 이스케이프만 필요합니다.
 
-- `"` must be escaped.
+- `"` 는 반드시 이스케이프 되어야 합니다.
 
-- Spaces and unescaped parentheses require the search term to be quoted.
+- 공백 및 이스케이프되지 않은 괄호는 따옴표로 묶어야 합니다.
 
-- The search term must not end in an odd number of backslashes.
+- 검색어는 홀수 개수의 백슬래시로 끝날 수 없습니다.
 
-## Object IDs
+## 객체 ID
 
 `nid:123`  
-the note with note id 123
+ID가 123인 노트를 찾습니다.
 
 `cid:123,456,789`  
-all cards with card ids 123, 456 or 789
+ID가 123,456,789인 노트를 찾습니다.
 
-Note and card IDs can be found in the [card info](stats.md) dialog in the
-browser. These searches may also be helpful when doing add-on
-development or otherwise working closely with the database.
+노트 및 카드 ID는 탐색의 [카드 정보](stats.md) 창에서 확인할 수 있습니다.
+이러한 검색은 에드온 개발을 하거나 데이터베이스와 긴밀하게 작업할 때 유용합니다.

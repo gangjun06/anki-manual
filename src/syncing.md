@@ -6,7 +6,8 @@
 서비스 입니다. 아래의 단계를 따라하기전, [무료 회원가입](https://ankiweb.net/) 을 하여 주세요.
 
 ## 소개 영상
-빠르게 동기화에 알고싶다면,  [동기화 소개 영상](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on). 을 확인하세요.
+
+빠르게 동기화에 대해 알고싶다면, [동기화 소개 영상](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)을 확인하세요.
 
 ## 셋업
 
@@ -44,7 +45,7 @@ USB 플래시 드라이브에서 Anki를 실행하는 경우 NTFS 파일 시스�
 
 관련 영상: <https://www.youtube.com/watch?v=UEAcpfMQnjo>
 
-통상적인 상황에서는 학습과 노트 편집을 병합할 수 있으므로 동기화하기 전에  2개의 다른 기기에서
+통상적인 상황에서는 학습과 노트 편집을 병합할 수 있으므로 동기화하기 전에 2개의 다른 기기에서
 학습 또는 편집하면 Anki가 두 위치 모두에서 변경 내용을 보존합니다. 같은 카드를 2개의 다른 기기에서
 학습했을 경우, 양쪽의 학습가 리비전 이력에 표시되며, 카드는 최근 대답한 상태로 유지됩니다.
 
@@ -104,7 +105,7 @@ content, so everything will be in one place.
 ## 방화벽
 
 Anki는 동기화할 떄에는 HTTPS 전송이 가능해야 하고 `ankiweb.net, ankiweb.net, sync2.ankiweb.net`에 접속하여 동기화할 수 있어야 합니다.
-이러한 도메인은 시간이 지남에 따라 변경될 수 있으며 이들이 가리키는 IP 주소도 변경될 수 있습니다. 
+이러한 도메인은 시간이 지남에 따라 변경될 수 있으며 이들이 가리키는 IP 주소도 변경될 수 있습니다.
 따라서 향후 방화벽규칙을 갱신해야 할 가능성을 줄이기 위해 `*.ankiweb.net` 에 와일드카드접근을 허용하는 것을 권장합니다.
 
 컴퓨터에 방화벽이 있는 경우 Anki에 대한 예외를 추가해야 합니다. 직장 또는 학교 네트워크에 접속하고 있는 경우는, 네트워크 관리자에게 문의해 주세요.
@@ -129,7 +130,7 @@ Anki 2.0에서는 `HTTPS_PROXY`가 아닌 `HTTP_PROXY`가 검색됩니다.
 
 Windows에서 환경 변수를 설정하려면 [구글검색](https://www.google.com/search?q=윈도우%20환경변수%20설정) 을 참고하세요.
 
-Mac에서 환경변수를 설정하려면 [이 링크](<http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x) 를 참고하세요.
+Mac에서 환경변수를 설정하려면 [이 링크](http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x) 를 참고하세요.
 
 보안 접속을 가로채거나 자체 인증서를 사용하여 네트워크가 잠기면, Anki가 SSL 에러를 발생시킬 가능성이 있습니다. 이러한 환경에서는 [에드온](https://ankiweb.net/shared/info/878367706)을 사용하여 오류를 회피할 수 있습니다.
 

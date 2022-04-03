@@ -1,27 +1,16 @@
-# Add-ons
+# 확장 프로그램
 
-Anki's capabilities can be extended with add-ons. Add-ons can provide
-features like extra support for specific languages, extra control over
-scheduling, and so on.
+Anki의 기능은 확장 프로그램으로 확장할 수 있습니다.
+확장 프로그램을 통해 특정 언어에 대한 추가 지원, 스케줄링에 대한 추가 제어 등의 기능을 사용할 수 있습니다.
 
-To browse the list of available add-ons, select the Tools>Add-ons
-menu item, then click on Get Add-ons.
+사용 가능한 애드온 목록을 확인하려면 [도구] -> [확장 프로그램] 메뉴 항목을 선택하고 [확장 프로그램 가져오기...]을 클릭합니다.
 
-If you have downloaded an add-on that is not working properly, or if you
-accidentally made a mistake when editing an add-on, you can use the
-"Delete" option in the menu to remove it.
+확장 프로그램이 제대로 동작하지 않거나 오류를 발생시키는 경우 "삭제" 옵션을 사용하여 제거할 수 있습니다.
 
-Add-ons use and modify arbitrary parts of Anki’s codebase, so in some
-cases, updating Anki can break the compatibility with older add-ons. If 
-one of your add-ons stops working after updating Anki, please consider
-reporting the issue to the add-on author. If you rely on this add-on,
-you will need to keep using an older Anki version until the add-on gets 
-an update. 
+확장 프로그램은 Anki의 코드베이스 중 임의의 부분을 사용하고 수정하기 때문에 Anki를 업데이트하면 이전 확장 프로그램과 호환되지 않을 수 있습니다.
+Anki 업데이트 후 확장 프로그램이 작동하지 않으면 제작자에게 문의하고 확장 프로그램이 업데이트될 때 까지는 이전 버전의 Anki를 계속 사용하는 것을 추천합니다.
 
-There is a "Contact Author" button on most add-ons pages on Ankiweb, 
-and many authors include their email address in the add-on, so if you
-need to get in touch with the author, editing the add-on and looking at
-the top of the file may help.
+Ankiweb의 대부분의 애드온 페이지에는 '개발자에게 연락하기(Contact Author)' 버튼이 있으며,
+많은 개발자가 애드온에 이메일 주소를 포함하고 있기 때문에 개발자에게 문의할 필요가 있는 경우 이를 사용할 수 있습니다.
 
-To learn how to write your own add-ons, please see the [add-on writing
-guide](https://addon-docs.ankiweb.net).
+만약 확장 프로그램을 어떻게 만드는지 알고 싶으시면, [확장 프로그램 제작 가이드](https://addon-docs.ankiweb.net)를 참고하세요.

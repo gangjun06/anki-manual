@@ -28,3 +28,5 @@
 ---
 
 현재 보고계시는 번역은, [gangjun06/anki-manual](https://github.com/gangjun06/anki-manual)에서 수정하실 수 있습니다.
+
+원본문서는 <https://docs.ankiweb.net> 에서 보실 수 있습니다.

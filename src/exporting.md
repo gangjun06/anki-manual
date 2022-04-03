@@ -2,67 +2,47 @@
 
 <!-- toc -->
 
-Exporting allows you to save part of your collection as a text file or
-packaged Anki deck. To export, click the File menu and choose 'Export'.
+내보내기를 통해 컬렉션의 일부를 텍스트 파일 또는 패키지화된 Anki 뭉치로 저장할 수 있습니다. 내보내려면 파일>'내보내기'를 사용하세요.
 
 ## 텍스트 파일
 
-If you choose "Notes in Plain Text", Anki will write the contents of the
-notes into a text file. Each field is separated by a tab. If you edit
-the resulting file and don't modify the first field, you can later
-import that file back into Anki and Anki will update your notes based on
-your edits, provided you import back into the same note type.
+"텍스트 파일로 정리한 노트"를 선택하면 Anki가 노트 내용을 텍스트 파일로 저장합니다.
+각각의 필드들은 탭으로 구부됩니다.
+내보낸 파일을 편집하고 첫 번째 필드를 수정하지 않으면 나중에 해당 파일을 Anki로 다시 가져올 수 있습니다.
+동일한 노트 유형으로 다시 가져올 경우 Anki는 편집한 내용에 따라 노트를 업데이트합니다.
+첫 번째 필드도 편집해야 하는 경우 첫 번째 필드가 실제 텍스트가 아닌 ID 번호가 되도록 노트 유형의 형식을 변경해야 합니다 [Add note id](https://ankiweb.net/shared/info/1672832404) 추가 프로그램을 설치하면 쉽게 설정할 수 있습니다.
+텍스트를 다시 가져올 때 형식을 보존하기 위해 텍스트는 모든 HTML 형식을 포함하여 내보냅니다.
 
-If you find yourself needing to edit the first field as well, you'll
-need to change the format of your note type so that the first field is
-an ID number rather than actual text. (You can install
-the [Add note id](https://ankiweb.net/shared/info/1672832404)
-add-on to make this easier.)
+## 패키지
 
-In order for formatting to be preserved when you import text back in,
-the text is exported with all the HTML formatting embedded in it.
+'패키지 '는 카드, 노트, 노트 유형 및 .apkg 또는 .colpkg으로 끝나는 파일에 번들된 사운드 또는 이미지로 구성됩니다.
+패키지 를 사용하여 사람들 간에 카드를 전송하거나 컬렉션의 일부를 백업할 수 있습니다.
 
-## 뭉치 패키지
+패키지에는 2가지 종류가 있습니다.
 
-A 'packaged deck' consists of cards, notes, note types, and any sounds or
-images bundled up into a file ending with .apkg or .colpkg. You can use
-packaged decks to transfer cards between people, or for backing up parts
-of your collection.
+### 컬랙션 패키지 (.colpkg)
 
-There are two different kinds of packaged decks.
+스케줄이 포함된 모든 데크를 내보내는 경우 이를 '컬렉션 패키지'라고 합니다.
+Anki는 전체 컬렉션을 .colpkg으로 끝나는 파일에 복사하여 바탕화면에 저장합니다.
+컬렉션 패키지는 컬렉션을 백업하거나 다른 장치에 복사하는 데 사용됩니다.
 
-### Collection (.colpkg)
+이전 버전의 Anki로 작성된 컬렉션 패키지를 collection.apkg이라고 부릅니다.
 
-When you export all decks with scheduling included, this is called a
-'collection package'. Anki will copy your entire collection into a file
-ending in .colpkg, and place it on your desktop. A collection package is
-used to back up your collection, or copy it to another device.
+나중에 이 파일을 가져오면 Anki는 컬렉션의 현재 카드를 모두 삭제하고
+컬렉션을 파일 내의 항목으로 바꿉니다. 이것은, 컬렉션을 기기간에 복사하는 경우에 편리합니다.
 
-Collection packages created with previous versions of Anki were called
-collection.apkg.
+컬렉션 패키지를 가져올 때 컬렉션의 기존 미디어는 삭제되지 않습니다.
+미사용 미디어를 삭제하려면 툴 -&gt; 미디어 체크를 사용하세요.
 
-When this file is later imported, Anki will delete all the current cards
-in the collection, and replace the collection with the items in the
-file. This is useful for copying your collection back and forth between
-devices.
+### 뭉치 꾸러미 (.apkg)
 
-Existing media in your collection is not deleted when you import a
-collection package. To delete unused media, use Tools&gt;Check Media.
+뭉치 꾸러미에는 하나의 뭉치(중첩된 경우 자식 뭉치까지)가 포함되어 있습니다.
+파일명은 .apkg으로 끝나지만 collection.apkg 이외의 파일명을 가집니다.
+뭉치 꾸러미를 불러오면 Anki는 내용을 컬렉션을 덮어쓰지 않고 추가합니다.
 
-### 뭉치 (.apkg)
+같은 노트를 가진 패키지를 여러번 불러온 경우 Anki는 최신에 변경된 카드로 유지합니다.
+따라서 업데이트된 덱을 다운로드하면 업데이트된 버전의 편집도 컬렉션에서 수행되지만,
+컬렉션에서 편집한 후 변경되지 않은 덱을 다시 가져오면 컬렉션의 변경 내용이 유지됩니다.
 
-Deck packages contain a single deck (and any child decks it may have).
-They have a filename ending with .apkg, but a filename other than
-collection.apkg. When you import a deck package, Anki will add the
-contents into your collection, rather than overwriting your collection.
-
-If some notes in the deck package have previously been imported, Anki
-will keep the version with the most recent modification time. So if you
-download an updated deck, the edits that have been made in the updated
-version will be made in your collection as well, but if you re-import an
-unchanged deck after making edits in your collection, the changes in
-your collection will be kept.
-
-If you choose not to include scheduling information, Anki will assume
-that you are sharing the deck with other people, and will remove marked
-and leech tags so that they will have a clean copy of it.
+복습 일정 정보를 포함하지 않는 경우 Anki는 사용자가 다른 사용자와 덱을 공유하고 있는 것으로 간주하고
+마크된 태그와 거머리 태그를 삭제하여 해당 태그가 깨끗한 복사본을 갖도록 합니다.

@@ -50,11 +50,11 @@ Anki는 다음에 보여줄 시간을 선택할 것입니다.
 
 ### 뭉치(Decks)
 
-`뭉치` 는 카드의 그룹입니다.  카드를 다른 뭉치에 배치하여, 모든 카드를 공부하는 대신
+`뭉치` 는 카드의 그룹입니다. 카드를 다른 뭉치에 배치하여, 모든 카드를 공부하는 대신
 카드 뭉치의 일부를 학습합니다. 각각의 뭉치는 새로 학습할 카드수, 얼마나 후에 카드를
 다시 학습할 것인지 등을 설정할 수 있습니다.
 
-뭉치는 다른 뭉치를 포함할 수 있으며, Anki는 `::`을 통하여 뭉치안의 뭉치를 구별합니다. 
+뭉치는 다른 뭉치를 포함할 수 있으며, Anki는 `::`을 통하여 뭉치안의 뭉치를 구별합니다.
 예시로, `영어::일상영단어`라는 뭉치는 `영어`뭉치안에 포함된 `일상영단어`뭉치를 뜻합니다.
 `영어::일상영단어`를 선택하면 일상영단어에 포함된 단어만 학습할 수 있고,
 `영어`를 선택하면 영어뭉치내의 모든 단어(일상영단어를 포함하는) 단어를 학습할 수 있습니다.
@@ -76,7 +76,7 @@ Anki는 `기본`이라는 뭉치로 시작합니다. 어떠한 뭉치에도 속�
 
 플래시 카드를 만들때는, 하나의 카드보다는 여러장의 카드를 만드는 것이 바람직합니다.
 예를들어 일본어를 배우고 있을때 `こんにちわ(곤니치와)`가 `안녕`을 뜻하는 것을 학습하기 위해
-`こんにちわ(곤니치와)`를 보여주고 `안녕`을 기억하도록 하는 카드와, 
+`こんにちわ(곤니치와)`를 보여주고 `안녕`을 기억하도록 하는 카드와,
 `안녕`을 보여주고 `こんにちわ(곤니치와)`를 기억하도록 하는 카드를 만들 수 있습니다.
 하나는 외국어를 인식하는 능력을 테스트하고, 다른 하나는 외국어 단어를 생성하는 능력을
 테스트하는 것입니다.
@@ -86,8 +86,8 @@ Anki는 `기본`이라는 뭉치로 시작합니다. 어떠한 뭉치에도 속�
 만들도록 도와줍니다. 이는 종이 플래시카드를 개선한 것이지만, 두가지 단점이 존재합니다.
 
 - 이러한 프로그램은 인식과 생성의 성과를 개별적으로 추적하지 않기 때문에 카드는 최적의
-시간에 표시되지 않는 경향이 있습니다. 즉, 원하는 것보다 더 많은 것을 잊거나 필요한 것보다
-더 많이 공부하게 됩니다.
+  시간에 표시되지 않는 경향이 있습니다. 즉, 원하는 것보다 더 많은 것을 잊거나 필요한 것보다
+  더 많이 공부하게 됩니다.
 
 - 이러한 방식은 질문과 대답이 완전히 동일할때만 정상적으로 동작합니다. 예를 들어 각 카드의 뒷면에 추가 정보를 표시할 수 없습니다.
 
@@ -122,15 +122,13 @@ Anki에서는 이러한 정보를 `노트`라고 하며 각각의 정보를 `필
 
 ### 카드 타입
 
-In order for Anki to create cards based on our notes, we need to give it
-a blueprint that says which fields should be displayed on the front or
-back of each card. This blueprint is called a 'card type'. Each type of
-note can have one or more card types; when you add a note, Anki will
-create one card for each card type.
+Anki가 노트를 바탕으로 카드를 만들기 위해서는 각 카드의 앞면 또는 뒷면에 어떤 정보를를 표시해야 하는지 템플릿을 제공해야 합니다.
+이 템플릿을 '노트 타입'이라고 합니다. 각 노트 타입에는 하나 이상의 카드 유형이 있을 수 있습니다.
+노트를 추가하면 Anki는 각 카드 유형에 대해 하나의 카드를 만듭니다.
 
-Each card type has two 'templates', one for the question and one for the
-answer. In the above French example, we wanted the recognition card to
-look like this:
+각 카드 유형에는 질문용과 답변용 두 개의 '템플릿'이 있습니다. 아래의 일본어 예에서는 인식 카드를 다음과 같이 표시하려고 했습니다.
+
+Each card type has two 'templates', one for the question and one for the answer. In the above French example, we wanted the recognition card to look like this:
 
     Q: Bonjour
     A: Hello

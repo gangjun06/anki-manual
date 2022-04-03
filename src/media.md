@@ -1,52 +1,36 @@
-# Media
+# 미디어
 
-Anki stores the sounds and images used in your notes in a folder next to
-the collection. For more on the folder location, please see the [file
-locations](files.md) section. When you add media within Anki, either by
-using the paperclip icon in the [editor](editing.md) or by pasting it into
-a field, Anki will copy it from its original location into the media
-folder. This makes it easy to back up your collection’s media or move it
-to another computer.
+Anki는 노트에 사용된 소리와 이미지를 컬렉션의 폴더에 저장합니다.
+폴더 위치와 관련된 정보는 [파일 위치](files.md)글을 확인하세요.
+[에디터](editing.md)의 클립 아이콘을 사용하거나 필드에 붙여넣기하여 Anki에 미디어를 추가할 수 있습니다(미디어는 이동하지 않고 미디어 폴더로 복제됩니다).
+이렇게 하면 컬렉션의 미디어를 쉽게 백업하거나 다른 컴퓨터로 이동할 수 있습니다.
 
-If your media filenames contain spaces or other special characters such
-as percentage signs, the way the filenames appear in the HTML editor will
-differ from the way the filenames appear on disk. For example, a file called
-`hello 100%.jpg` will appear as `hello%20100%25.jpg` in the HTML editor.
-Internally, Anki still uses the original filenames, so if you would like to
-[search](searching.md) for the file or modify the filename with [Find&Replace](browsing.md#find-and-replace), you will
-need to use the name as it appears on disk, not as it appears in the
-HTML editor. Exporting to a text file is another way to see the underlying
-representation.
+미디어 파일 이름에 공백이나 퍼센트 기호와 같은 특수 문자가 포함되어 있는 경우
+HTML 편집기에서와 탐색기에서 파일 이름이 표시되는 방식은 다릅니다. 예를 들어 `hello 100%.jpg` 라는 파일이 있는경우 HTML에디터에서는
+`hello%20100%25.jpg`로 표시됩니다.
+내부적으로 Anki는 여전히 원본 파일 이름을 사용하기 때문에 [검색](searching.md) 또는 [검색 및 바꾸기](browsing.md#find-and-replace)를 사용하여 파일 이름을 수정하려면 HTML 에디터가 아닌 디스크에 표시되는 이름을 사용해야 합니다.
+텍스트 파일로 내보내는 것도 기본 이름을 볼 수 있는 방법입니다.
 
-## Checking Media
+## 미디어 확인
 
-You can use the Tools&gt;Check Media menu option to scan your notes and
-media folder. It will generate a report of files in the media folder
-that are not used by any notes, and media referenced in notes but
-missing from your media folder. It does not scan question or answer
-templates, which is why you can’t place media references to fields in
-the template. If you need a static image or sound on every card, name it
-with a leading \_ (e.g., `\_dog.jpg`) to tell Anki to ignore it when
-checking for media. If you delete media using the unused media check,
-Anki will move it into your operating system’s trash folder, so you can
-recover if you accidentally delete media that shouldn’t have been
-deleted.
+도구 -> 미디어 검사... 메뉴에서 이 도구를 사용하여 노트와 미디어를 스캔할 수 있습니다.
+미디어 폴더에는 있지만 노트에서는 사용되지 않거나 노트에서 파일이 사용되지만 미디어가 누락된 것들에 관한 보고서를 생성합니다.
+It does not scan question or answer templates, which is why you can’t place media references to fields in the template.
+질문 또는 답변 템플릿의 경우에는 검색되지 않으므로 템플릿에서는 필드에 미디어를 추가할 수 없습니다.
 
-## Manually Adding Media
+모든 카드에 정적 이미지 또는 사운드가 필요한 경우 미디어 확인 시 무시하도록 Anki에게 알려주기 위해 위해 접두사 \_(예시: \_dog.jpg)를 붙입니다.
+사용하지 않은 미디어 체크를 사용하여 미디어를 삭제하면 Anki가 해당 미디어를 운영 체제의 휴지통 폴더로 이동하므로
+삭제해서는 안 되는 미디어를 실수로 삭제한 경우 복구할 수 있습니다.
 
-When you add media via Anki's interface, Anki takes care of ensuring the
-filenames are encoded in a way that should work across different devices,
-removing characters that won't work on certain operating systems,
-and truncating very long filenames.
+## 수동으로 미디어 추가
 
-If you manually add files to your [media folder](files.md#file-locations),
-you should use Tools&gt;Check Media afterwards, to ensure the filenames are
-encoded correctly. If you skip this step, any filenames that are not compatible
-will be skipped when syncing.
+Anki의 인터페이스를 통해 미디어를 추가하면 Anki는 파일명을 서로 다른 운영체제에서 작동하도록 변경하고 매우 긴 파일명을 잘라냅니다.
 
-## Supported Formats
+수동으로 [미디어 폴더](files.md#file-locations)에 파일을 추가할 경우 나중에 도구 -> 미디어 확인을 사용하여 파일 이름이 올바르게 인코딩되어 있는지 확인해야 합니다.
+이 단계를 건너뛰면 동기화 시 호환되지 않는 파일들을 모두 건너뜁니다.
 
-Anki uses a program called mpv (and mplayer as a fallback) in order to support
-sounds and videos. A wide variety of file formats are supported, but not all of
-these formats will work on AnkiWeb and the mobile clients. MP3 audio and
-MP4 video seems to be the most universally supported.
+## 지원하는 포멧
+
+Anki는 사운드와 비디오를 지원하기 위해 mpv(및 mplayer)라는 프로그램을 사용합니다.
+다양한 파일 형식이 지원되지만 AnkiWeb 및 모바일 앱에서는 몇몇 포멧이 잘 작동하지 않을 수 있습니다.
+보편적으로는 음악에는 mp3, 영상에는 mp4가 사용됩니다.

@@ -1,4 +1,4 @@
-# Graphs and Statistics
+# 통계
 
 <!-- toc -->
 
