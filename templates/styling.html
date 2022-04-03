@@ -141,7 +141,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="styling--html"><a class="header" href="#styling--html">Styling &amp; HTML</a></h1>
+                        <h1 id="스타일링--html"><a class="header" href="#스타일링--html">스타일링 &amp; HTML</a></h1>
 <ul>
 <li><a href="#card-styling">Card Styling</a></li>
 <li><a href="#image-resizing">Image Resizing</a></li>
@@ -152,7 +152,7 @@
 <li><a href="#browser-appearance">Browser Appearance</a></li>
 <li><a href="#platform-specific-css">Platform-Specific CSS</a></li>
 <li><a href="#installing-fonts">Installing Fonts</a></li>
-<li><a href="#night-mode">Night Mode</a></li>
+<li><a href="#%EC%95%BC%EA%B0%84-%EB%AA%A8%EB%93%9C">야간 모드</a></li>
 <li><a href="#fading-and-scrolling">Fading and Scrolling</a></li>
 <li><a href="#javascript">Javascript</a></li>
 </ul>
@@ -361,7 +361,7 @@ font depending on where you’re reviewing:</p>
 }
 </code></pre>
 <p>And in the template:</p>
-<pre><code class="language-html">&lt;div class=jp&gt;{{Field}}&lt;/div&gt;
+<pre><code class="language-html">&lt;div class=&quot;jp&quot;&gt;{{Field}}&lt;/div&gt;
 </code></pre>
 <p>For different iOS devices, you can use '.iphone' and '.ipad'.</p>
 <p>You can also use properties like .gecko, .opera, and .ie to select
@@ -420,7 +420,7 @@ the font-family: line in the .card section and change the font to
 <p>Please make sure the filenames match exactly. If the file is called
 arial.TTF and you write arial.ttf in your card templates, it will not
 work.</p>
-<h2 id="night-mode"><a class="header" href="#night-mode">Night Mode</a></h2>
+<h2 id="야간-모드"><a class="header" href="#야간-모드">야간 모드</a></h2>
 <p>You can customize the way templates appear when night mode is enabled in
 the preferences screen.</p>
 <p>If you wanted a lighter grey background, you could use
@@ -443,14 +443,17 @@ id=answer to turn off scrolling.</p>
 <p>The question side of a card fades in by default. If you wish to adjust
 this delay, you can place the following at the top of your front card
 template:</p>
-<pre><code class="language-html">    &lt;script&gt;qFade=100; if (typeof anki !== 'undefined') anki.qFade=qFade;&lt;/script&gt;
+<pre><code class="language-html">&lt;script&gt;
+  qFade = 100;
+  if (typeof anki !== &quot;undefined&quot;) anki.qFade = qFade;
+&lt;/script&gt;
 </code></pre>
 <p>100 (milliseconds) is the default; set to 0 to disable fading.</p>
 <h2 id="javascript"><a class="header" href="#javascript">Javascript</a></h2>
 <p>As Anki cards are treated like webpages, it is possible to embed some
 Javascript on your cards via the card template. For a good reference
 please read <a href="https://forums.ankiweb.net/t/card-templates-user-input-101-buttons-keyboard-shortcuts-etc-guide/13756">this post</a>
-in the forums. </p>
+in the forums.</p>
 <p>Because Javascript is an advanced feature and so many things can go
 wrong, <strong>Javascript functionality is provided without any support or
 warranty</strong>. We can not provide any assistance with writing Javascript,

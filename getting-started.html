@@ -202,10 +202,10 @@ A: O
 <p>그것이 옳다는 것을 확인한 후 Anki에게 얼마나 잘 기억하고 있는지 말하면,
 Anki는 다음에 보여줄 시간을 선택할 것입니다.</p>
 <h3 id="뭉치decks"><a class="header" href="#뭉치decks">뭉치(Decks)</a></h3>
-<p><code>뭉치</code> 는 카드의 그룹입니다.  카드를 다른 뭉치에 배치하여, 모든 카드를 공부하는 대신
+<p><code>뭉치</code> 는 카드의 그룹입니다. 카드를 다른 뭉치에 배치하여, 모든 카드를 공부하는 대신
 카드 뭉치의 일부를 학습합니다. 각각의 뭉치는 새로 학습할 카드수, 얼마나 후에 카드를
 다시 학습할 것인지 등을 설정할 수 있습니다.</p>
-<p>뭉치는 다른 뭉치를 포함할 수 있으며, Anki는 <code>::</code>을 통하여 뭉치안의 뭉치를 구별합니다. 
+<p>뭉치는 다른 뭉치를 포함할 수 있으며, Anki는 <code>::</code>을 통하여 뭉치안의 뭉치를 구별합니다.
 예시로, <code>영어::일상영단어</code>라는 뭉치는 <code>영어</code>뭉치안에 포함된 <code>일상영단어</code>뭉치를 뜻합니다.
 <code>영어::일상영단어</code>를 선택하면 일상영단어에 포함된 단어만 학습할 수 있고,
 <code>영어</code>를 선택하면 영어뭉치내의 모든 단어(일상영단어를 포함하는) 단어를 학습할 수 있습니다.</p>
@@ -221,7 +221,7 @@ Anki는 다음에 보여줄 시간을 선택할 것입니다.</p>
 <h3 id="노트--필드"><a class="header" href="#노트--필드">노트 &amp; 필드</a></h3>
 <p>플래시 카드를 만들때는, 하나의 카드보다는 여러장의 카드를 만드는 것이 바람직합니다.
 예를들어 일본어를 배우고 있을때 <code>こんにちわ(곤니치와)</code>가 <code>안녕</code>을 뜻하는 것을 학습하기 위해
-<code>こんにちわ(곤니치와)</code>를 보여주고 <code>안녕</code>을 기억하도록 하는 카드와, 
+<code>こんにちわ(곤니치와)</code>를 보여주고 <code>안녕</code>을 기억하도록 하는 카드와,
 <code>안녕</code>을 보여주고 <code>こんにちわ(곤니치와)</code>를 기억하도록 하는 카드를 만들 수 있습니다.
 하나는 외국어를 인식하는 능력을 테스트하고, 다른 하나는 외국어 단어를 생성하는 능력을
 테스트하는 것입니다.</p>
@@ -262,14 +262,11 @@ A: こんにちわ
 <p>필드를 추가 및 편집하려면 노트를 추가하거나 편집하는 동안 <code>필드...</code>버튼을 클릭합니다.
 필드에 관한 자세한 설명은 <a href="editing.html#%ED%95%84%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95">필드 커스터마이징</a> 섹션을 참고하세요.</p>
 <h3 id="카드-타입"><a class="header" href="#카드-타입">카드 타입</a></h3>
-<p>In order for Anki to create cards based on our notes, we need to give it
-a blueprint that says which fields should be displayed on the front or
-back of each card. This blueprint is called a 'card type'. Each type of
-note can have one or more card types; when you add a note, Anki will
-create one card for each card type.</p>
-<p>Each card type has two 'templates', one for the question and one for the
-answer. In the above French example, we wanted the recognition card to
-look like this:</p>
+<p>Anki가 노트를 바탕으로 카드를 만들기 위해서는 각 카드의 앞면 또는 뒷면에 어떤 정보를를 표시해야 하는지 템플릿을 제공해야 합니다.
+이 템플릿을 '노트 타입'이라고 합니다. 각 노트 타입에는 하나 이상의 카드 유형이 있을 수 있습니다.
+노트를 추가하면 Anki는 각 카드 유형에 대해 하나의 카드를 만듭니다.</p>
+<p>각 카드 유형에는 질문용과 답변용 두 개의 '템플릿'이 있습니다. 아래의 일본어 예에서는 인식 카드를 다음과 같이 표시하려고 했습니다.</p>
+<p>Each card type has two 'templates', one for the question and one for the answer. In the above French example, we wanted the recognition card to look like this:</p>
 <pre><code>Q: Bonjour
 A: Hello
    Page #12
